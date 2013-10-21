@@ -1,0 +1,6 @@
+package intermediate;
+import frontend.Scan;
+public class Parse {
+public Parse(Scan s){}
+	public void buildtree(){}
+}

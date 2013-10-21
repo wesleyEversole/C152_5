@@ -1,0 +1,14 @@
+package frontend;
+
+import java.io.File;
+
+public class scan {
+private File f;
+/*
+ * need to make a FileReader and a BufferedReader to deal with the input file*/
+public scan(String fname){
+
+}
+
+	
+}
