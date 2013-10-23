@@ -3,9 +3,9 @@ package intermediate;
 public class Token {
 String value ;
 TokenType type ;
-	public Token(String s,TokenType tt){
+	public Token(String s){
 		value= s;
-		type=tt;
+		//type=tt;
 	}
 	public String getValue() {
 		return value;
