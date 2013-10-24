@@ -1,6 +1,6 @@
 import java.io.File;
 
-import frontend.Scan;
+import frontend.CSScanner;
 
 
 public class mainForRunning {
@@ -9,12 +9,8 @@ public class mainForRunning {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		for(String i:args){
-		System.out.println(i);
-		}
-		
-		Scan s= new Scan(args[0]);
+		// TODO Auto-generated method stub		
+		CSScanner s= new CSScanner(args[0]);
 	}
 
 }

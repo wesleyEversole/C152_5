@@ -1,5 +1,8 @@
 package intermediate;
 
 public enum TokenType {
-//types go here
+	AND, MONDAY, COND, DEFINE,
+	ELSE, IF, LAMBDA, LET,
+	LETREC, LETSTAR, NOT, OR,
+	QUOTE,
 }

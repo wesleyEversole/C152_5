@@ -1,10 +1,10 @@
 package intermediate;
 
 public class Token {
-String value ;
-TokenType type ;
+	private String value;
+	private TokenType type;
 	public Token(String s){
-		value= s;
+		value = s;
 		//type=tt;
 	}
 	public String getValue() {
