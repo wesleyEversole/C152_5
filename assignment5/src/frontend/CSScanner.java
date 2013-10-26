@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.Stack;
 
-import intermediate.Token;
 
 public class CSScanner 
 {
@@ -31,7 +30,7 @@ public class CSScanner
 			System.out.println(currentLine);
 			for (int i = 0; i < currentLine.length(); i++) {
 				char c = currentLine.charAt(i);
-				System.out.println();
+				//System.out.println();
 				if (c == '(' || c == ')') {
 					//System.out.println("Found: " + c);
 				}

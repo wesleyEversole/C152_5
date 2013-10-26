@@ -1,2 +1,2 @@
-commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\n<messages>\n<message>scan is working but trying to make types out of white space&\#x0A;</message>\n<message>Built what should be the shell for our program</message>\n<message>I hope this commits&\#x0A;</message>\n</messages>
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\n<messages>\n<message>Scan is working but it need to not have &quot; &quot; in the middle, also ( and )&\#x0A;need to stay for the parser.</message>\n<message>scan is working but trying to make types out of white space&\#x0A;</message>\n<message>Built what should be the shell for our program</message>\n<message>I hope this commits&\#x0A;</message>\n</messages>
 eclipse.preferences.version=1
