@@ -27,7 +27,6 @@ public class CSScanner {
 	public Token nextToken() {
 		Token token = null;
 		String tString = "";
-		System.out.println("\t\tnextToken");
 		if (s.hasNext()) {
 			if (currentChar > currentLine.length()) {
 				currentLine = s.nextLine();
@@ -37,15 +36,15 @@ public class CSScanner {
 			}
 			char c = 0;
 			boolean isComment = false;
-			while ( (currentChar < (currentLine.length() - 1)) && 
-			        !(c == ' ' || c == '('|| c == ')')) {
+			while (currentChar < currentLine.length() - 1 && c != ' '
+					&& !(c == '(') && !(c == ')')) {
 				c = currentLine.charAt(currentChar++);
-				System.out.println("\t\t>>>" + c);
+			  System.out.println(">>>"+c);
 				if (isComment) {
 					tString += Character.toString(c);
 					c = 0;
 				} else if (c == '(' || c == ')') {
-					System.out.println("\tFound: " + c);
+					// System.out.println("Found: " + c);
 					if (tString.length() > 0) {
 						currentChar--;
 					} else {
@@ -60,18 +59,17 @@ public class CSScanner {
 				} else if ((c >= '0') && (c <= '9')) {
 					// System.out.println("Is Number: " + c);
 				}
-				// no case to handle ' or + or anything of the sort.
-				// cases like null? would not be handled yet
+				//no case to handle ' or + or anything of the sort.
 
 			}
 
-			if (tString.isEmpty() || isComment) {// should only be here at the end of line
+			if (!(tString.isEmpty() || isComment)) {
+				System.out.println("Pushing: " + tString);
+				token = new Token(tString);
+			} else { // should only be here at the end of line
 				// System.out.println(tString);
 				currentChar++;
 				token = nextToken();
-			} else { 
-				System.out.println("\tPushing: " + tString);
-				token = new Token(tString);
 			}
 
 		} else {

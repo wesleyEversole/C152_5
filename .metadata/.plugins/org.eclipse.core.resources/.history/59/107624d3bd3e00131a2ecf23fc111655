@@ -61,7 +61,6 @@ public class CSScanner {
 					// System.out.println("Is Number: " + c);
 				}
 				// no case to handle ' or + or anything of the sort.
-				// cases like null? would not be handled yet
 
 			}
 

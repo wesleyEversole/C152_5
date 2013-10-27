@@ -27,7 +27,7 @@ public class CSScanner {
 	public Token nextToken() {
 		Token token = null;
 		String tString = "";
-		System.out.println("\t\tnextToken");
+		System.out.println("\tnextToken");
 		if (s.hasNext()) {
 			if (currentChar > currentLine.length()) {
 				currentLine = s.nextLine();
@@ -40,12 +40,12 @@ public class CSScanner {
 			while ( (currentChar < (currentLine.length() - 1)) && 
 			        !(c == ' ' || c == '('|| c == ')')) {
 				c = currentLine.charAt(currentChar++);
-				System.out.println("\t\t>>>" + c);
+				System.out.println("\t>>>" + c);
 				if (isComment) {
 					tString += Character.toString(c);
 					c = 0;
 				} else if (c == '(' || c == ')') {
-					System.out.println("\tFound: " + c);
+					System.out.println("Found: " + c);
 					if (tString.length() > 0) {
 						currentChar--;
 					} else {
@@ -61,7 +61,6 @@ public class CSScanner {
 					// System.out.println("Is Number: " + c);
 				}
 				// no case to handle ' or + or anything of the sort.
-				// cases like null? would not be handled yet
 
 			}
 
@@ -70,7 +69,7 @@ public class CSScanner {
 				currentChar++;
 				token = nextToken();
 			} else { 
-				System.out.println("\tPushing: " + tString);
+				System.out.println("Pushing: " + tString);
 				token = new Token(tString);
 			}
 

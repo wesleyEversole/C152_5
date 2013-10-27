@@ -16,9 +16,7 @@ public class MainForRunning {
 		}
 
 		CSScanner s = new CSScanner(args[0]);
-		while(!s.nextToken().getValue().isEmpty()) {
-			System.out.println("M");;
-		}
+		while(!s.nextToken().getValue().isEmpty());
 	}
 
 }
