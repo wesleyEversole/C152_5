@@ -1,3 +1,10 @@
 1382838998428	Rename local variable 'token'
 1382840264225	Convert local variable 'currentLine' to field
 1382840303124	Rename local variable 'i'
+1382907216816	Rename compilation unit 'Program.java'
+1382907250545	Rename type 'topLvlItem'
+1382908736570	Rename field 'left'
+1382908746278	Rename field 'Left'
+1382908810529	Rename field 'Name'
+1382910034621	Rename type 'print'
+1382911222223	Rename local variable 'n'

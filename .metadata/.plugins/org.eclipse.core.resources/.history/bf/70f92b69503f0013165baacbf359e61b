@@ -1,0 +1,23 @@
+package backend;
+
+import intermediate.*;
+
+/*
+ * should print out the tree and table*/
+public class print {
+	public print() {
+	}
+	public void interp(TopLvlItem tli){
+		exc(tli.getMT().getNode());
+	}
+	private void exc(Node n){
+		if(n.getLeft()!=null){
+			exc(n.getLeft());
+		}
+		if(!n.getValue().isEmpty()){
+			//need to print (
+			System.out.println(n.getValue());
+			//need to print )
+		}
+	}
+}

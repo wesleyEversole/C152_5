@@ -1,7 +1,14 @@
 package intermediate;
 
 public class Tree {
-	public Tree(Node n) {
+	Node n;
+	
+	public Tree(Node node) {
+		this.n = node;
+	}
 
+	public Node getNode() {
+		// TODO Auto-generated method stub
+		return n;
 	}
 }

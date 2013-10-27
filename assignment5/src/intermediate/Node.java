@@ -1,27 +1,46 @@
 package intermediate;
 
 public class Node {
-	private String Name;
-	private String Child;
+	private String value;
+	private Node left;
+	private Node right;
+	private Node parent;
 
-	public Node(String n, String c) {
-		Name = n;
-		Child = c;
+	public Node(Node p) {
+		value = "";
+		left = null;
+		right = null;
+		parent = p;
 	}
 
-	public String getName() {
-		return Name;
+	public Node getParent() {
+		return parent;
 	}
 
-	public void setName(String name) {
-		Name = name;
+	public void setParent(Node parent) {
+		this.parent = parent;
 	}
 
-	public String getChild() {
-		return Child;
+	public String getValue() {
+		return value;
 	}
 
-	public void setChild(String child) {
-		Child = child;
+	public void setValue(String name) {
+		value = name;
+	}
+	public Node getLeft() {
+		return left;
+	}
+
+	public void setLeft(Node left) {
+		this.left = left;
+	}
+
+	public Node getRight() {
+		return right;
+	}
+
+	public void setRight(Node right) {
+		this.right = right;
 	}
 }

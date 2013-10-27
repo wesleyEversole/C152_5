@@ -27,25 +27,26 @@ public class CSScanner {
 	public Token nextToken() {
 		Token token = null;
 		String tString = "";
-		System.out.println("\t\tnextToken");
+		//System.out.println("\t\tnextToken");
 		if (s.hasNext()) {
 			if (currentChar > currentLine.length()) {
 				currentLine = s.nextLine();
 				currentLine = currentLine.trim();
-				System.out.println(currentLine);
+				//System.out.println(currentLine);
 				currentChar = 0;
 			}
 			char c = 0;
 			boolean isComment = false;
-			while ( (currentChar < (currentLine.length() - 1)) && 
+			while ( (currentChar < currentLine.length()) && 
 			        !(c == ' ' || c == '('|| c == ')')) {
 				c = currentLine.charAt(currentChar++);
-				System.out.println("\t\t>>>" + c);
+				
+				//System.out.println("\t\t>>>" + c);
 				if (isComment) {
 					tString += Character.toString(c);
 					c = 0;
 				} else if (c == '(' || c == ')') {
-					System.out.println("\tFound: " + c);
+					//System.out.println("\tFound: " + c);
 					if (tString.length() > 0) {
 						currentChar--;
 					} else {
@@ -54,7 +55,7 @@ public class CSScanner {
 				} else if (c == ';') {
 					tString += Character.toString(c);
 					isComment = true;
-				} else if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
+				} else if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c=='*') || c== '\'') {
 					// System.out.println("letter");
 					tString += Character.toString(c);
 				} else if ((c >= '0') && (c <= '9')) {
@@ -70,7 +71,7 @@ public class CSScanner {
 				currentChar++;
 				token = nextToken();
 			} else { 
-				System.out.println("\tPushing: " + tString);
+				//System.out.println("\tPushing: " + tString);
 				token = new Token(tString);
 			}
 
@@ -79,21 +80,10 @@ public class CSScanner {
 		}
 		return token;
 	}
+
+	public boolean hasNext() {
+		
+		return s.hasNext();
+	}
 }
 
-/*
- * need to make a FileReader and a BufferedReader to deal with the input file
- */
-/*
- * public Scan(String fName){ symbols = new Stack<Token>(); String str = "";
- * Scanner s = null; try { s = new Scanner(new File(fName)); } catch
- * (FileNotFoundException e) { // TODO Auto-generated catch block
- * e.printStackTrace(); } int n=1; while(s.hasNext()) { str = s.nextLine();
- * System.out.println("current line #" + n + ": "+str); //may not want to
- * replace the ( and ) str = str.replace(RPLACE[0],""); str =
- * str.replace(RPLACE[1],""); str = str.trim(); String[] strSplit
- * =str.split(" "); for(String i:strSplit ) { if(i.equals(";")) { break; }
- * if(!i.equals("	")) { Token t = new Token(i);
- * System.out.println("token= "+t.getValue() +" type = " + t.getType()); } }
- * n++; }
- */
