@@ -1,0 +1,352 @@
+!SESSION 2013-10-24 12:20:15.910 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 4 0 2013-10-24 13:27:37.869
+!MESSAGE Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:272)
+	at org.eclipse.egit.core.op.PullOperation$1.run(PullOperation.java:90)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2326)
+	at org.eclipse.egit.core.op.PullOperation.execute(PullOperation.java:121)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI.execute(PullOperationUI.java:117)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI$1.run(PullOperationUI.java:92)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.jgit.api.errors.CheckoutConflictException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:258)
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:264)
+	... 7 more
+Caused by: org.eclipse.jgit.errors.CheckoutConflictException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:401)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:381)
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:185)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2013-10-24 13:28:03.795
+!MESSAGE Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:272)
+	at org.eclipse.egit.core.op.PullOperation$1.run(PullOperation.java:90)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2326)
+	at org.eclipse.egit.core.op.PullOperation.execute(PullOperation.java:121)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI.execute(PullOperationUI.java:117)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI$1.run(PullOperationUI.java:92)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.jgit.api.errors.CheckoutConflictException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:258)
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:264)
+	... 7 more
+Caused by: org.eclipse.jgit.errors.CheckoutConflictException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:401)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:381)
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:185)
+	... 8 more
+!SESSION 2013-10-24 13:29:13.465 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 4 0 2013-10-24 13:30:56.669
+!MESSAGE Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:272)
+	at org.eclipse.egit.core.op.PullOperation$1.run(PullOperation.java:90)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2326)
+	at org.eclipse.egit.core.op.PullOperation.execute(PullOperation.java:121)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI.execute(PullOperationUI.java:117)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI$1.run(PullOperationUI.java:92)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.jgit.api.errors.CheckoutConflictException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:258)
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:264)
+	... 7 more
+Caused by: org.eclipse.jgit.errors.CheckoutConflictException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:401)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:381)
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:185)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2013-10-24 13:31:41.511
+!MESSAGE Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:272)
+	at org.eclipse.egit.core.op.PullOperation$1.run(PullOperation.java:90)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2326)
+	at org.eclipse.egit.core.op.PullOperation.execute(PullOperation.java:121)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI.execute(PullOperationUI.java:117)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI$1.run(PullOperationUI.java:92)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.jgit.api.errors.CheckoutConflictException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:258)
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:264)
+	... 7 more
+Caused by: org.eclipse.jgit.errors.CheckoutConflictException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:401)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:381)
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:185)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2013-10-24 13:34:03.595
+!MESSAGE Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:272)
+	at org.eclipse.egit.core.op.PullOperation$1.run(PullOperation.java:90)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2326)
+	at org.eclipse.egit.core.op.PullOperation.execute(PullOperation.java:121)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI.execute(PullOperationUI.java:117)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI$1.run(PullOperationUI.java:92)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.jgit.api.errors.CheckoutConflictException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:258)
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:264)
+	... 7 more
+Caused by: org.eclipse.jgit.errors.CheckoutConflictException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:401)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:381)
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:185)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2013-10-24 13:34:23.656
+!MESSAGE Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:272)
+	at org.eclipse.egit.core.op.PullOperation$1.run(PullOperation.java:90)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2326)
+	at org.eclipse.egit.core.op.PullOperation.execute(PullOperation.java:121)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI.execute(PullOperationUI.java:117)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI$1.run(PullOperationUI.java:92)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.jgit.api.errors.CheckoutConflictException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:258)
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:264)
+	... 7 more
+Caused by: org.eclipse.jgit.errors.CheckoutConflictException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:401)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:381)
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:185)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2013-10-24 13:34:29.629
+!MESSAGE Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:272)
+	at org.eclipse.egit.core.op.PullOperation$1.run(PullOperation.java:90)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2326)
+	at org.eclipse.egit.core.op.PullOperation.execute(PullOperation.java:121)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI.execute(PullOperationUI.java:117)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI$1.run(PullOperationUI.java:92)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.jgit.api.errors.CheckoutConflictException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:258)
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:264)
+	... 7 more
+Caused by: org.eclipse.jgit.errors.CheckoutConflictException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:401)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:381)
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:185)
+	... 8 more
+!SESSION 2013-10-24 13:36:02.540 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 4 0 2013-10-24 13:38:09.917
+!MESSAGE Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:272)
+	at org.eclipse.egit.core.op.PullOperation$1.run(PullOperation.java:90)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2326)
+	at org.eclipse.egit.core.op.PullOperation.execute(PullOperation.java:121)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI.execute(PullOperationUI.java:117)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI$1.run(PullOperationUI.java:92)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.jgit.api.errors.CheckoutConflictException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:258)
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:264)
+	... 7 more
+Caused by: org.eclipse.jgit.errors.CheckoutConflictException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:401)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:381)
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:185)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2013-10-24 13:39:10.474
+!MESSAGE Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:272)
+	at org.eclipse.egit.core.op.PullOperation$1.run(PullOperation.java:90)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2326)
+	at org.eclipse.egit.core.op.PullOperation.execute(PullOperation.java:121)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI.execute(PullOperationUI.java:117)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI$1.run(PullOperationUI.java:92)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.jgit.api.errors.CheckoutConflictException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:258)
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:264)
+	... 7 more
+Caused by: org.eclipse.jgit.errors.CheckoutConflictException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:401)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:381)
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:185)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2013-10-24 13:39:31.361
+!MESSAGE Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:272)
+	at org.eclipse.egit.core.op.PullOperation$1.run(PullOperation.java:90)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2326)
+	at org.eclipse.egit.core.op.PullOperation.execute(PullOperation.java:121)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI.execute(PullOperationUI.java:117)
+	at org.eclipse.egit.ui.internal.pull.PullOperationUI$1.run(PullOperationUI.java:92)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.jgit.api.errors.CheckoutConflictException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:258)
+	at org.eclipse.jgit.api.PullCommand.call(PullCommand.java:264)
+	... 7 more
+Caused by: org.eclipse.jgit.errors.CheckoutConflictException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:401)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:381)
+	at org.eclipse.jgit.api.MergeCommand.call(MergeCommand.java:185)
+	... 8 more
+
+!ENTRY org.eclipse.egit.core 4 0 2013-10-24 13:39:48.937
+!MESSAGE Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.api.RebaseCommand.call(RebaseCommand.java:284)
+	at org.eclipse.egit.core.op.RebaseOperation$1.run(RebaseOperation.java:100)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2326)
+	at org.eclipse.egit.core.op.RebaseOperation.execute(RebaseOperation.java:119)
+	at org.eclipse.egit.ui.internal.rebase.RebaseHelper$1.run(RebaseHelper.java:58)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.jgit.errors.CheckoutConflictException: Checkout conflict with files: 
+assignment5/bin/intermediate/Parse.class
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:401)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:381)
+	at org.eclipse.jgit.api.RebaseCommand.checkoutCommit(RebaseCommand.java:789)
+	at org.eclipse.jgit.api.RebaseCommand.initFilesAndRewind(RebaseCommand.java:538)
+	at org.eclipse.jgit.api.RebaseCommand.call(RebaseCommand.java:214)
+	... 6 more
+!SESSION 2013-10-26 14:38:19.230 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-10-26 14:38:27.713
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2013-10-26 18:30:15.198 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.egit.core 4 0 2013-10-26 19:52:49.542
+!MESSAGE Failed reading credentials from secure store
+!STACK 0
+org.eclipse.equinox.security.storage.StorageException: No password provided.
+	at org.eclipse.equinox.internal.security.storage.SecurePreferences.get(SecurePreferences.java:264)
+	at org.eclipse.equinox.internal.security.storage.SecurePreferencesWrapper.get(SecurePreferencesWrapper.java:106)
+	at org.eclipse.egit.core.securestorage.EGitSecureStore.getCredentials(EGitSecureStore.java:76)
+	at org.eclipse.egit.ui.internal.credentials.EGitCredentialsProvider.getCredentialsFromSecureStore(EGitCredentialsProvider.java:235)
+	at org.eclipse.egit.ui.internal.credentials.EGitCredentialsProvider.get(EGitCredentialsProvider.java:105)
+	at org.eclipse.jgit.transport.HttpAuthMethod.authorize(HttpAuthMethod.java:118)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:443)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:365)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:130)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1120)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:152)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:227)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI.execute(PushOperationUI.java:145)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI$1.run(PushOperationUI.java:202)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.egit.core 4 0 2013-10-26 19:52:51.460
+!MESSAGE An exception occurred during push on URI https://github.com/wesleyEversole/C152_5.git: An internal Exception occurred during push: https://github.com/wesleyEversole/C152_5.git: not authorized
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Exception caught during execution of push command
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:156)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:227)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI.execute(PushOperationUI.java:145)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI$1.run(PushOperationUI.java:202)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.jgit.errors.TransportException: https://github.com/wesleyEversole/C152_5.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:446)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:365)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:130)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1120)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:152)
+	... 4 more
