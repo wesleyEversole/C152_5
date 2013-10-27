@@ -19,11 +19,6 @@ public class MainForRunning {
 		while(!s.nextToken().getValue().isEmpty()) {
 			System.out.println("M");;
 		}
-		
-		// test parser 
-		Parse p = new Parse(args[0]);
-		
-		
 	}
 
 }
