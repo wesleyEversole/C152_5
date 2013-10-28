@@ -2,6 +2,7 @@ package frontend;
 
 public enum TokenType {
 PUNCTUATION, SYMBOL, NUMBER,
+OPEN_LIST, CLOSE_LIST,
 // RESERVED WORDS "_" instead of -
 // _BANG == !
 // _STAR == *

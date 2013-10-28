@@ -1,7 +1,17 @@
 package intermediate;
 
 public class Symbol {
-	public Symbol(String n) {
-
+	String value;
+	public Symbol() {
+		value="";
+	}
+	public Symbol(String s) {
+		value = s;
+	}
+	public String get() {
+		return value;
+	}
+	public void set(String s) {
+		value = s;
 	}
 }

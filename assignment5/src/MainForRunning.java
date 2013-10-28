@@ -14,10 +14,10 @@ public class MainForRunning {
 			System.out.println(i);
 		}
 
-		CSScanner s = new CSScanner(args[0]);
-		while(!s.nextToken().getValue().isEmpty()) {
-			//System.out.println("M");;
-		}
+//		CSScanner s = new CSScanner(args[0]);
+//		while(!s.nextToken().getValue().isEmpty()) {
+//			//System.out.println("M");;
+//		}
 		
 		// test parser 
 		Parse p = new Parse(args[0]);
