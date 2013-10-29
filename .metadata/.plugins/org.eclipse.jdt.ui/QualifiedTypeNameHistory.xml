@@ -5,4 +5,11 @@
 <fullyQualifiedTypeName name="frontend.Scan"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="intermediate.TopLvlItem"/>
+<fullyQualifiedTypeName name="intermediate.SymbolTable"/>
+<fullyQualifiedTypeName name="intermediate.Symbol"/>
+<fullyQualifiedTypeName name="java.util.TreeMap"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.security.KeyStore.Entry"/>
+<fullyQualifiedTypeName name="java.util.Map.Entry"/>
 </qualifiedTypeNameHistroy>
