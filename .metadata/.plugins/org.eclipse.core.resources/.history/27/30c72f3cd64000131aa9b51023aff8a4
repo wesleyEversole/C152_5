@@ -37,7 +37,7 @@ public class Parse {
     	}
     	
     }
-    CSScanner scan;
+    ScanTest scan;
 
 	// builds the tree and symbol table
 	// make a tree map first.
@@ -47,9 +47,9 @@ public class Parse {
 	// from the stack the tree can be made from the map.
 
 	private void init(CSScanner scan) {
-		this.scan = scan;
+		//this.scan = scan;
 		//this.scan = new ScanTest();
-		//scan = scan;
+		scan = scan;
 		pro = new TopLvlItem(new Tree(new Node(null)), new SymbolTable());
 
 	}
