@@ -38,10 +38,6 @@ public class Parse {
     	
     }
     ScanTest scan;
-    
-	private Parse(CSScanner scan) {
-		init(scan);
-	}
 
 	// builds the tree and symbol table
 	// make a tree map first.

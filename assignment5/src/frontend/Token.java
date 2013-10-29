@@ -7,7 +7,6 @@ public class Token {
 	public Token(String s) {
 		value = s;
 		setType(s);
-		// we'll decide what type of token and save it.
 	}
 
 	private void setType(String s) {
@@ -31,6 +30,8 @@ public class Token {
 		// RESERVED WORDS "_" instead of -
 		// _BANG == !
 		// _STAR == *
+		case "!": type = TokenType.BANG; break;
+		case "*": type = TokenType.STAR; break;
 
 		case "AND": type=TokenType.AND;break;
 		case "BEGIN": type=TokenType.BEGIN;break;
