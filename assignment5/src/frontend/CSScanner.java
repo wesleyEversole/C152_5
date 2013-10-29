@@ -38,15 +38,20 @@ public class CSScanner {
 			if (c == ';') {
 				return ";";
 			}
-			if (c >= 'a' && c <= 'z') {
+			else if (isLetter(c)) {
 				currentIdx++;
 				return nextTokenRec(token += c, line);
 			}
-			else if (c == '(' || c == ')') {
-				currentIdx++;
-				return Character.toString(c);
+			else if (isParan(c)) {
+				if (c == '(') {
+					currentIdx++;
+					return Character.toString(c);
+				}
+				else {
+					return Character.toString(c);
+				}
 			}
-			else if (isPunctuation(c)) {
+			else if (isSingleChar(c)) {
 				currentIdx++;
 				System.out.println("Punctuation: " + c);
 				return Character.toString(c);
@@ -57,8 +62,16 @@ public class CSScanner {
 			}
 		}
 	}
+	
+	private static boolean isLetter(char c) {
+		return (c >= 'a') && (c <= 'z');
+	}
+	
+	private static boolean isParan(char c) {
+		return (c == '(') || (c == ')');
+	}
 
-	private static boolean isPunctuation(char c) {
+	private static boolean isSingleChar(char c) {
 		switch (c){
 			case '\\' : return true;
 			case '\'' : return true;
@@ -97,69 +110,3 @@ public class CSScanner {
 		return s.hasNext();
 	}
 }
-	
-	/*private String nextTokenRec(String tok, String line) {
-	Token token = null;
-	String tString = "";
-	if (s.hasNext()) {
-		if (currentChar > currentLine.length()) {
-			currentLine = s.nextLine();
-			currentLine = currentLine.trim();
-			// System.out.println(currentLine);
-			currentChar = 0;
-		}
-		char c = 0;
-		System.out.println(">>>>>>>> l=" + currentLine);
-		System.out.println("           0000000000111111111122222222223333333333444444444455555555556666666666");
-		System.out.println("           0123456789012345678901234567890123456789012345678901234567890123456789");
-		
-		System.out.println("  Char " + currentChar + " " + currentLine.length());
-		while ((currentChar < currentLine.length())) {
-			c = currentLine.charAt(currentChar++);
-
-			System.out.println("\t\t>>>" + c);
-            if (c== ' ') {
-            	break;
-            }
-			if (c == '(' || c == ')') {
-				System.out.println("\tFound: " + c);
-				if (tString.length() > 0) {
-					currentChar--;
-					System.out.println(" char=" + currentChar);
-				} else {
-					tString = Character.toString(c);
-				}
-				break;
-			} else if (c == ';') {
-				tString = "";
-				System.out.println(">>>>>>>> l=" + currentLine);
-				currentLine = s.nextLine();
-				currentLine = currentLine.trim();
-				currentChar = 0;
-			} else if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')
-					|| (c == '*') || c == '\'' || c == '-') {
-				// System.out.println("letter");
-				tString += Character.toString(c);
-			} else if ((c >= '0') && (c <= '9')) {
-				// System.out.println("Is Number: " + c);
-			}
-			// no case to handle ' or + or anything of the sort.
-			// cases like null? would not be handled yet
-
-		}
-
-		if (tString.isEmpty()) {
-			// should only be here at the end of
-			// line
-			System.out.println("  EMPTY" + tString);
-			currentChar++;
-			token = nextToken();
-		} else {
-			// System.out.println("\tPushing: " + tString);
-			token = new Token(tString);
-		}
-
-	} else {
-		token = new Token("");
-	}
-}*/
