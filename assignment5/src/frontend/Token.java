@@ -13,6 +13,7 @@ public class Token {
 		// set the token type based on the string...
 		switch (s.toUpperCase()) {
 		    // makes it easy to just use stuff from enum
+		case " " : type = TokenType.IGNORE; break;
 		case "\"":
 		case "\'":
 		case "\\":
@@ -20,8 +21,7 @@ public class Token {
 		case "]":
 		case "{":
 		case "}":
-		case ";":
-		case "": 
+		case ";": 
 		  type = TokenType.PUNCTUATION; break;
 		  
 		case "(": type = TokenType.OPEN_LIST; break; 
@@ -93,5 +93,4 @@ public class Token {
 	public void setType(TokenType type) {
 		this.type = type;
 	}
-
 }
