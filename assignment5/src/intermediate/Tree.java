@@ -2,7 +2,7 @@ package intermediate;
 
 public class Tree {
 	Node n;
-	
+
 	public Tree(Node node) {
 		this.n = node;
 	}

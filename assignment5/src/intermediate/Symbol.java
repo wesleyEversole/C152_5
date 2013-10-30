@@ -2,15 +2,19 @@ package intermediate;
 
 public class Symbol {
 	String value;
+
 	public Symbol() {
-		value="";
+		value = "";
 	}
+
 	public Symbol(String s) {
 		value = s;
 	}
+
 	public String get() {
 		return value;
 	}
+
 	public void set(String s) {
 		value = s;
 	}

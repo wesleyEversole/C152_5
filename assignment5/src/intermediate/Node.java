@@ -28,6 +28,7 @@ public class Node {
 	public void setValue(String name) {
 		value = name;
 	}
+
 	public Node getLeft() {
 		return left;
 	}

@@ -1,4 +1,5 @@
 package frontend;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -17,61 +18,54 @@ public class CSScanner {
 			e.printStackTrace();
 		}
 	}
-	
+
 	private String nextTokenRec(String token, String line) {
 		char c = ' ';
-		
+
 		// Get new character if any remain
 		if (currentIdx < line.length()) {
 			c = line.charAt(currentIdx);
 		}
-		
+
 		// Check if the current character is a space and see if anything
 		// can be returned.
 		if ((c == ' ') && (token.length() > 0)) {
 			currentIdx++;
 			return token;
-		}
-		else {
+		} else {
 			// Check for characters
 			if (c == ';') {
 				return ";";
-			}
-			else if (isOpenParan(c)) {
-				if (token.contains("'")) {	
+			} else if (isOpenParan(c)) {
+				if (token.contains("'")) {
 					currentIdx++;
 					return nextTokenRec(token += c, line);
-				}
-				else {
+				} else {
 					currentIdx++;
 					return Character.toString(c);
 				}
-			}
-			else if (isCloseParan(c)) {
+			} else if (isCloseParan(c)) {
 				if (token.contains("'(")) {
 					currentIdx++;
 					token += ")";
 					return token;
-				}
-				else if (token.length() > 1) {
+				} else if (token.length() > 1) {
 					return token;
-				}
-				else {
+				} else {
 					currentIdx++;
 					return ")";
 				}
-			}
-			else {
+			} else {
 				currentIdx++;
 				return nextTokenRec(token += c, line);
 			}
 		}
 	}
-	
+
 	private static boolean isCloseParan(char c) {
 		return (c == ')');
 	}
-	
+
 	private static boolean isOpenParan(char c) {
 		return (c == '(');
 	}
@@ -84,12 +78,10 @@ public class CSScanner {
 					currentLine = s.nextLine();
 					currentIdx = 0;
 					return new Token(";");
-				}
-				else {
+				} else {
 					return new Token(token);
 				}
-			}
-			else {
+			} else {
 				currentLine = s.nextLine().trim();
 				currentIdx = 0;
 				return new Token(nextTokenRec("", currentLine));
