@@ -1,8 +1,3 @@
-/*
- * @Author Tim Stullich , Wesley Eversole
- * Assignment 5 
- * Project for CS 152
- */
 package intermediate;
 
 public class Tree {
@@ -13,6 +8,7 @@ public class Tree {
 	}
 
 	public Node getNode() {
+		// TODO Auto-generated method stub
 		return n;
 	}
 }

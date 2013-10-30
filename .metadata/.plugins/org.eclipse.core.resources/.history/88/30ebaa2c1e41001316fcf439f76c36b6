@@ -1,8 +1,3 @@
-/*
- * @Author Tim Stullich , Wesley Eversole
- * Assignment 5 
- * Project for CS 152
- */
 package frontend;
 
 import intermediate.*;
@@ -16,7 +11,9 @@ public class Parse {
 
 	}
 
+
 	CSScanner scan;
+
 
 	private void init(CSScanner scan) {
 		this.scan = scan;
@@ -47,10 +44,10 @@ public class Parse {
 			System.out.println("Empty token");
 			return;
 		}
-		if (t.getType() == TokenType.SPACE) {
+		if(t.getType()== TokenType.SPACE){
 			System.out.println("Token " + "Space");
-		} else {
-			System.out.println("Token " + t.getValue());
+		}else{
+		System.out.println("Token " + t.getValue());
 		}
 		while (t.getType() == TokenType.COMMENT
 				|| t.getType() == TokenType.SPACE) {

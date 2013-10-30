@@ -1,13 +1,9 @@
-/*
- * @Author Tim Stullich , Wesley Eversole
- * Assignment 5 
- * Project for CS 152
- */
 package backend;
 
 import java.util.Map.Entry;
 
 import intermediate.*;
+
 
 public class Print {
 	String indent = "";
