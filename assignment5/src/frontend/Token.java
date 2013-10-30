@@ -1,5 +1,6 @@
 package frontend;
 
+
 public class Token {
 	private String value;
 	private TokenType type;
@@ -14,14 +15,14 @@ public class Token {
 		switch (s.toUpperCase()) {
 		    // makes it easy to just use stuff from enum
 		case " " : type = TokenType.IGNORE; break;
+		case ";": type = TokenType.IGNORE; break;
+		case "'()": type = TokenType.SYMBOL; break;
 		case "\"":
-		case "\'":
 		case "\\":
 		case "[":
 		case "]":
 		case "{":
 		case "}":
-		case ";": 
 		  type = TokenType.PUNCTUATION; break;
 		  
 		case "(": type = TokenType.OPEN_LIST; break; 
@@ -93,4 +94,5 @@ public class Token {
 	public void setType(TokenType type) {
 		this.type = type;
 	}
+
 }

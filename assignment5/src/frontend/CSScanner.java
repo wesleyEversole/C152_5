@@ -1,5 +1,4 @@
 package frontend;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -7,11 +6,10 @@ import java.util.Scanner;
 public class CSScanner {
 	private Scanner s;
 	private String currentLine;
-	private int currentIdx = 0;
+	private static int currentIdx = 0;
 
 	public CSScanner(String fileName) {
 		s = null;
-		// symbols = new Stack<Token>();
 		try {
 			s = new Scanner(new File(fileName));
 			currentLine = "";
@@ -21,14 +19,15 @@ public class CSScanner {
 	}
 	
 	private String nextTokenRec(String token, String line) {
-		// If I hit a space I need to return
-		char c;
+		char c = ' ';
+		
+		// Get new character if any remain
 		if (currentIdx < line.length()) {
 			c = line.charAt(currentIdx);
 		}
-		else {
-			return "";
-		}
+		
+		// Check if the current character is a space and see if anything
+		// can be returned.
 		if ((c == ' ') && (token.length() > 0)) {
 			currentIdx++;
 			return token;
@@ -38,23 +37,29 @@ public class CSScanner {
 			if (c == ';') {
 				return ";";
 			}
-			else if (isLetter(c)) {
-				currentIdx++;
-				return nextTokenRec(token += c, line);
-			}
-			else if (isParan(c)) {
-				if (c == '(') {
+			else if (isOpenParan(c)) {
+				if (token.contains("'")) {	
+					currentIdx++;
+					return nextTokenRec(token += c, line);
+				}
+				else {
 					currentIdx++;
 					return Character.toString(c);
 				}
-				else {
-					return Character.toString(c);
-				}
 			}
-			else if (isSingleChar(c)) {
-				currentIdx++;
-				System.out.println("Punctuation: " + c);
-				return Character.toString(c);
+			else if (isCloseParan(c)) {
+				if (token.contains("'(")) {
+					currentIdx++;
+					token += ")";
+					return token;
+				}
+				else if (token.length() > 1) {
+					return token;
+				}
+				else {
+					currentIdx++;
+					return ")";
+				}
 			}
 			else {
 				currentIdx++;
@@ -63,31 +68,18 @@ public class CSScanner {
 		}
 	}
 	
-	private static boolean isLetter(char c) {
-		return (c >= 'a') && (c <= 'z');
+	private static boolean isCloseParan(char c) {
+		return (c == ')');
 	}
 	
-	private static boolean isParan(char c) {
-		return (c == '(') || (c == ')');
-	}
-
-	private static boolean isSingleChar(char c) {
-		switch (c){
-			case '\\' : return true;
-			case '\'' : return true;
-			case '"' : return true;
-			case '[' : return true;
-			case ']' : return true;
-			case '{' : return true;
-			case '}' : return true;
-			default : return false;
-		}
+	private static boolean isOpenParan(char c) {
+		return (c == '(');
 	}
 
 	public Token nextToken() {
 		if (s.hasNext()) {
 			if (currentIdx < currentLine.length()) {
-				String token = nextTokenRec("", currentLine);
+				String token = nextTokenRec("", currentLine.trim());
 				if (token.contains(";")) {
 					currentLine = s.nextLine();
 					currentIdx = 0;
@@ -98,7 +90,7 @@ public class CSScanner {
 				}
 			}
 			else {
-				currentLine = s.nextLine();
+				currentLine = s.nextLine().trim();
 				currentIdx = 0;
 				return new Token(nextTokenRec("", currentLine));
 			}
