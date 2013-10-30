@@ -26,6 +26,13 @@
 		<item value="383" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Ubuntu|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
+	<section name="org.eclipse.egit.ui.internal.merge.MergeResultDialog.dialogBounds">
+		<item value="732" key="DIALOG_WIDTH"/>
+		<item value="240" key="DIALOG_Y_ORIGIN"/>
+		<item value="320" key="DIALOG_X_ORIGIN"/>
+		<item value="222" key="DIALOG_HEIGHT"/>
+		<item value="1|Ubuntu|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
 	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
 		<item value="654" key="DIALOG_WIDTH"/>
 		<item value="91" key="DIALOG_Y_ORIGIN"/>

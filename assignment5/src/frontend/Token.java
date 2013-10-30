@@ -12,10 +12,13 @@ public class Token {
 
 	private void setType(String s) {
 		// set the token type based on the string...
+
 		switch (s.toUpperCase()) {
 		    // makes it easy to just use stuff from enum
+		case "\0": type = TokenType.EOF; break;
+		case "" : type = TokenType.NULL;break;
 		case " " : type = TokenType.IGNORE; break;
-		case ";": type = TokenType.IGNORE; break;
+		case ";": type = TokenType.COMMENT; break;
 		case "'()": type = TokenType.SYMBOL; break;
 		case "\"":
 		case "\\":
@@ -70,8 +73,10 @@ public class Token {
 		
 		default:
 			 // handle numbers
-			 if (s.matches("[-+]?\\d*.*\\d*([eE][-+]?\\d+)?")) {
+			 
+			if (s.matches("[-+]?\\d*.*\\d*([eE][-+]?\\d+)?")) {
 				 type=TokenType.NUMBER;
+				
 			 }
 			 // else just a symbol
 			  type=TokenType.SYMBOL;
