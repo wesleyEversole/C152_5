@@ -1,7 +1,0 @@
-package intermediate;
-
-public class SymbolTable {
-	public SymbolTable(Symbol s) {
-
-	}
-}

@@ -1,0 +1,7 @@
+package intermediate;
+import java.util.Collections;
+import java.util.List;
+public class program {
+List<TopLvlItem> prolist;
+SymbolTable TLST;
+}
