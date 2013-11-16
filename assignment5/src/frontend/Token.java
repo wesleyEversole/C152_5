@@ -10,12 +10,17 @@ public class Token {
 	private TokenType type;
 
 	public Token(String s) {
+		System.out.print("Construct token" + s);
 		value = s;
 		setType(s);
+		System.out.println(" Type:" + type);
 	}
 
 	private void setType(String s) {
 		// set the token type based on the string...
+
+		// default is UNKNOWN
+		type = TokenType.UNKNOWN;
 
 		switch (s.toUpperCase()) {
 		// makes it easy to just use stuff from enum
@@ -63,6 +68,8 @@ public class Token {
 		case "AND":
 			type = TokenType.AND;
 			break;
+		case "APPEND":
+			type = TokenType.APPEND;
 		case "BEGIN":
 			type = TokenType.BEGIN;
 			break;
@@ -163,12 +170,17 @@ public class Token {
 		default:
 			// handle numbers
 
-			if (s.matches("[-+]?\\d*.*\\d*([eE][-+]?\\d+)?")) {
+			if (s.matches("^[-+]?\\d*\\.?\\d*([eEfFgG][-+]?\\d+)?$")) {
 				type = TokenType.NUMBER;
+				System.out.println("in token number:" + s);
 
+			} else if (s.matches("\"[^\"]+\"")) {
+				// string but embedded " not supported
+				type = TokenType.STRING;
+			} else {
+				// else just a symbol
+				type = TokenType.SYMBOL;
 			}
-			// else just a symbol
-			type = TokenType.SYMBOL;
 			break;
 		}
 	}

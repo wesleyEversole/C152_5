@@ -1,0 +1,115 @@
+/*
+ * @Author Tim Stullich , Wesley Eversole
+ * Assignment 5 
+ * Project for CS 152
+ */
+package frontend;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class CSScanner {
+	private Source src;
+	private char ch;
+	private String currentLine;
+	private static int currentIdx = 0;
+
+	public CSScanner(String fileName) {
+		src = new Source(fileName);
+		ch = src.nextChar();
+	}
+
+	private static boolean isCloseParen(char c) {
+		return (c == ')');
+	}
+
+	private static boolean isOpenParen(char c) {
+		return (c == '(');
+	}
+
+	private void skipWhiteSpace() {
+		// skip whitespace
+		while (Character.isSpaceChar(ch)) {
+			ch = src.nextChar();
+		}
+	}
+	
+	public Token nextToken() {
+		Token token;
+
+		// skip all whitespace and comments
+		while (true) {
+			skipWhiteSpace();
+			if (ch == ';') {
+				src.skipLine();
+				ch = src.nextChar();
+			} else {
+				break;
+			}
+		}
+
+		switch (ch) {
+		case '(': token = new Token("("); break;
+		case ')': token = new Token(")");break;
+		case '#': token = getBoolean(); break;
+		case '\'': token = getLiteral(); break;
+		default: token = getWord();
+		}
+		return token;
+	}
+
+	private Token getWord() {
+		return new Token(getWordString());
+	}
+
+	private String getWordString() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private StringBuilder stemp;
+	
+	private Token getLiteral() {
+		// handle '(...) '#(...) 'anything else
+		// Are we looking for word or list?
+		Token retv;
+		
+		stemp = null;
+		ch = src.nextChar();
+		if (ch=='#') {
+			stemp.append(ch);
+			ch = src.nextChar();
+		}
+		if (ch=='(') {
+			retv = new Token(getListString());
+		} else {
+			retv = new Token(getWordString());
+		}
+		return null;
+	}
+
+	private String getListString() {
+		Integer parenCnt = 1;
+		stemp.append(ch);
+		while (parenCnt>0) {
+			ch= src.nextChar();
+			if (ch=='(')) {
+				parenCnt++;
+			} else if (ch==')') {
+				parenCnt--;
+			}
+			
+		}
+		return null;
+	}
+
+	private Token getBoolean() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public boolean hasNext() {
+		return s.hasNext();
+	}
+}

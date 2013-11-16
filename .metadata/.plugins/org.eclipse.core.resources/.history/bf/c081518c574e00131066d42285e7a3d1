@@ -1,0 +1,105 @@
+/*
+ * @Author Tim Stullich , Wesley Eversole
+ * Assignment 5 
+ * Project for CS 152
+ */
+package frontend;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class CSScanner {
+	private Scanner s;
+	private String currentLine;
+	private static int currentIdx = 0;
+
+	public CSScanner(String fileName) {
+		s = null;
+		try {
+			s = new Scanner(new File(fileName));
+			currentLine = "";
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private String nextTokenRec(String token, String line) {
+		char c = ' ';
+
+		// Get new character if any remain
+		if (currentIdx < line.length()) {
+			c = line.charAt(currentIdx);
+		}
+
+		// Check if the current character is a space and see if anything
+		// can be returned.
+		if ((c == ' ') && (token.length() > 0)) {
+			currentIdx++;
+			return token;
+		} else {
+			// Check for characters
+			if (c == ';') {
+				return ";";
+			} else if (isOpenParan(c)) {
+				if (token.contains("'")) {
+					currentIdx++;
+					return nextTokenRec(token += c, line);
+				} else {
+					currentIdx++;
+					return Character.toString(c);
+				}
+			} else if (isCloseParan(c)) {
+				if (token.contains("'(")) {
+					currentIdx++;
+					token += ")";
+					return token;
+				} else if (token.length() > 1) {
+					return token;
+				} else {
+					currentIdx++;
+					return ")";
+				}
+			} else {
+				currentIdx++;
+				return nextTokenRec(token += c, line);
+			}
+		}
+	}
+
+	private static boolean isCloseParan(char c) {
+		return (c == ')');
+	}
+
+	private static boolean isOpenParan(char c) {
+		return (c == '(');
+	}
+
+	public Token nextToken() {
+		if (s.hasNext()) {
+			System.out.println("Get next token");
+			if (currentIdx < currentLine.length()) {
+				String token = nextTokenRec("", currentLine.trim());
+				if (token.contains(";")) {
+					currentLine = s.nextLine();
+					currentIdx = 0;
+					System.out.println("Token ;");
+					return new Token(";");
+				} else {
+					System.out.println("Token:"+token);
+					return new Token(token);
+				}
+			} else {
+				currentLine = s.nextLine().trim();
+				currentIdx = 0;
+				System.out.println("nextTokenRec");
+				return new Token(nextTokenRec("", currentLine));
+			}
+		}
+		return new Token("\0");
+	}
+
+	public boolean hasNext() {
+		return s.hasNext();
+	}
+}

@@ -1,0 +1,142 @@
+/*
+ * @Author Tim Stullich , Wesley Eversole
+ * Assignment 5 
+ * Project for CS 152
+ */
+package frontend;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class CSScanner {
+	private Source src;
+	private char ch;
+	private String currentLine;
+	private static int currentIdx = 0;
+
+	public CSScanner(String fileName) {
+		src = new Source(fileName);
+		ch = src.nextChar();
+	}
+
+	private static boolean isCloseParen(char c) {
+		return (c == ')');
+	}
+
+	private static boolean isOpenParen(char c) {
+		return (c == '(');
+	}
+
+	private void skipWhiteSpace() {
+		// skip whitespace
+		while (Character.isSpaceChar(ch)&& ch != '\0') {
+			ch = src.nextChar();
+		}
+	}
+	
+	public Token nextToken() {
+		Token token;
+
+		// skip all whitespace and comments
+		while (true) {
+			skipWhiteSpace();
+			if (ch == ';') {
+				src.skipLine();
+				ch = src.nextChar();
+			} else {
+				break;
+			}
+		}
+
+		switch (ch) {
+		case '(': token = new Token("("); ch = src.nextChar();break;
+		case ')': token = new Token(")"); ch = src.nextChar();break;
+		case '#': token = getBoolean(); break;
+		case '\'': token = getLiteral(); break;
+		case '\0': token = new Token("\0");
+		default: token = getWord();
+		}
+		return token;
+	}
+
+	private StringBuilder stemp;
+	
+	private Token getWord() {
+		return new Token(getWordString());
+	}
+
+	private String getWordString() {
+		stemp = new StringBuilder();
+
+		while (!Character.isSpaceChar(ch)) {
+			if(ch==-1){
+				ch=0;
+				System.out.println("we got -1 !");
+				break;
+			}
+			System.out.println(Character.getNumericValue(ch));
+			stemp.append(ch);
+			ch = src.nextChar();
+			if (ch=='(' || ch==')') {
+				break; // word over at ()
+			}
+		}
+		
+		return stemp.toString();
+	}
+
+	
+	private Token getLiteral() {
+		// handle '(...) '#(...) 'anything else
+		// Are we looking for word or list?
+		Token retv;
+		
+		stemp = new StringBuilder();
+		ch = src.nextChar();
+		if (ch=='#') {
+			stemp.append(ch);
+			ch = src.nextChar();
+		}
+		if (ch=='(') {
+			retv = new Token(getListString());
+		} else {
+			retv = new Token(getWordString());
+		}
+		return null;
+	}
+
+	private String getListString() {
+		Integer parenCnt = 1;
+		stemp.append(ch);
+		while (parenCnt>0) {
+			ch= src.nextChar();
+			if (ch=='(') {
+				parenCnt++;
+			} else if (ch==')') {
+				parenCnt--;
+			}
+			stemp.append(ch);
+		}
+		return stemp.toString();
+	}
+
+	private Token getBoolean() {
+		stemp = new StringBuilder();
+		stemp.append('#');
+		ch=src.nextChar();
+		if (ch == 'f'|| ch == 'F') {
+			stemp.append('f');
+		} else if ( ch == 't' || ch == 'T') {
+			stemp.append('t');
+		} else {
+			// error condition bad character
+			stemp.append('t');
+		}
+		return new Token(stemp.toString());
+	}
+
+	public boolean hasNext() {
+		return (ch != '\0');
+	}
+}

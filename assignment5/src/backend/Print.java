@@ -15,23 +15,29 @@ public class Print {
 	public Print() {
 	}
 
-	public void interp(TopLvlItem tli) {
+	public void interp(Program pro) {
 		System.out.println("Printing Tree");
-		exc(tli.getMT().getNode());
-		System.out.println("Printing End of Tree\n");
-		System.out.println("Printing SymbolTable");
-		for (Entry<String, Symbol> entry : tli.getMST().entrySet()) {
-			System.out.println(entry.getKey());
+		System.out.println("(");
+		for (TopLvlItem tli : pro.getProlist()) {
+			exc(tli.getMT().getNode());
+			System.out.println("Printing End of Tree\n");
+			System.out.println("Printing SymbolTable");
+			for (Entry<String, ObjectValue> entry : tli.getMST().entrySet()) {
+				System.out.println(entry.getKey());
+			}
 		}
+
 	}
 
 	private void exc(Node n) {
+		// System.out.println("exc");
 		if (n.getLeft() != null) {
 			System.out.println(indent + "(");
 			indent += " ";
 			exc(n.getLeft());
 		}
-		if (!n.getValue().isEmpty()) {
+
+		if (n != null && !n.getValue().isEmpty()) {
 			// need to print (
 			// needs formating
 			System.out.println(indent + n.getValue());
@@ -43,7 +49,11 @@ public class Print {
 			if (n.getLeft() == null && n.getRight() != null) {
 				Node n2 = n.getRight();
 				if (n2.getLeft() == null && n2.getRight() == null) {
-					indent = indent.substring(0, indent.length() - 1);
+					if (indent.length() > 0) {
+						indent = indent.substring(0, indent.length() - 1);
+					} else {
+						indent = "";
+					}
 					System.out.println(indent + ")");
 				}
 			}

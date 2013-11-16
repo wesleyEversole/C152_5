@@ -15,4 +15,8 @@ public class Tree {
 	public Node getNode() {
 		return n;
 	}
+
+	public void setNode(Node node) {
+		n = node;
+	}
 }

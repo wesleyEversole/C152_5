@@ -1,23 +1,28 @@
+/*
+ * @Author Tim Stullich , Wesley Eversole
+ * Assignment 5 
+ * Project for CS 152
+ */
 package intermediate;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Program {
-	List<TopLvlItem> prolist;
+	List<TopLvlItem> formList;
 	SymbolTable TLST;
 
 	public Program() {
-	    prolist = new ArrayList<>();
+		formList = new ArrayList<>();
 		TLST = new SymbolTable();
 	}
 
 	public List<TopLvlItem> getProlist() {
-		return prolist;
+		return formList;
 	}
 
-	public void setProlist(List<TopLvlItem> prolist) {
-		this.prolist = prolist;
+	public void setProlist(List<TopLvlItem> formList) {
+		this.formList = formList;
 	}
 
 	public SymbolTable getTLST() {
@@ -27,8 +32,9 @@ public class Program {
 	public void setTLST(SymbolTable tLST) {
 		TLST = tLST;
 	}
-	public void addSysmbol(String name, Object o){
-		TLST.add(name,(Symbol) o);
-		
+
+	public void addSysmbol(String name, Object o) {
+		TLST.add(name, (ObjectValue) o);
+
 	}
 }

@@ -1,0 +1,59 @@
+/*
+ * @Author Tim Stullich , Wesley Eversole
+ * Assignment 5 
+ * Project for CS 152
+ */
+package intermediate;
+
+import frontend.Token;
+import frontend.TokenType;
+
+public class Node {
+	private Token value;
+	private Node left;
+	private Node right;
+	private Node parent;
+
+	public Node(Node p) {
+		value = null;
+		left = null;
+		right = null;
+		parent = p;
+	}
+
+	public Node getParent() {
+		return parent;
+	}
+
+	public void setParent(Node parent) {
+		this.parent = parent;
+	}
+
+	public String getValue() {
+		return value.getValue();
+	}
+	
+	public TokenType getType() {
+		return value.getType();
+	}
+
+	public void setValue(Token name) {
+		value = name;
+	}
+
+	public Node getLeft() {
+		return left;
+	}
+
+	public void setLeft(Node left) {
+		this.left = left;
+	}
+
+	public Node getRight() {
+		return right;
+	}
+
+	public void setRight(Node right) {
+		this.right = right;
+	}
+}

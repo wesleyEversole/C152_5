@@ -5,14 +5,19 @@
  */
 package intermediate;
 
+import frontend.Token;
+import frontend.TokenType;
+
 public class Node {
-	private String value;
+	private Token value;
+	private ObjectValue ov; // scheme base objects
+	private ObjectType ot; // scheme object type
 	private Node left;
 	private Node right;
 	private Node parent;
 
 	public Node(Node p) {
-		value = "";
+		value = null;
 		left = null;
 		right = null;
 		parent = p;
@@ -27,10 +32,18 @@ public class Node {
 	}
 
 	public String getValue() {
-		return value;
+		if (value == null) {
+			return "";
+		} else {
+			return value.getValue();
+		}
 	}
 
-	public void setValue(String name) {
+	public TokenType getType() {
+		return value.getType();
+	}
+
+	public void setValue(Token name) {
 		value = name;
 	}
 
@@ -48,5 +61,21 @@ public class Node {
 
 	public void setRight(Node right) {
 		this.right = right;
+	}
+
+	public ObjectValue getOv() {
+		return ov;
+	}
+
+	public void setOv(ObjectValue ov) {
+		this.ov = ov;
+	}
+
+	public ObjectType getOt() {
+		return ot;
+	}
+
+	public void setOt(ObjectType ot) {
+		this.ot = ot;
 	}
 }

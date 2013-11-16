@@ -1,0 +1,38 @@
+/*
+ * @Author Tim Stullich , Wesley Eversole
+ * Assignment 5 
+ * Project for CS 152
+ */
+package frontend;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class CSScanner {
+	private Source src;
+	private String currentLine;
+	private static int currentIdx = 0;
+
+	public CSScanner(String fileName) {
+		src = new Source(fileName);
+	}
+
+
+	private static boolean isCloseParen(char c) {
+		return (c == ')');
+	}
+
+	private static boolean isOpenParen(char c) {
+		return (c == '(');
+	}
+
+	public Token nextToken() {
+		Token token;
+
+	}
+
+	public boolean hasNext() {
+		return s.hasNext();
+	}
+}

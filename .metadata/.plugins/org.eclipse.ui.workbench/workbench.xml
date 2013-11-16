@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="28" version="2.0">
+<workbench progressCount="24" version="2.0">
 <workbenchAdvisor/>
-<window height="764" maximized="true" width="1020" x="1675" y="83">
+<window height="764" maximized="true" width="1020" x="0" y="0">
 <fastViewData fastViewLocation="1024">
 <orientation position="512" view="org.eclipse.egit.ui.RepositoriesView"/>
 </fastViewData>
@@ -34,78 +34,13 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
-<part id="6"/>
-<part id="7"/>
-<part id="8"/>
-<part id="9"/>
-<part id="10"/>
-<part id="11"/>
-<part id="12"/>
-<part id="13"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.ui.DefaultTextEditor" name="input.lisp" partName="input.lisp" path="/home/wesley/git/C152_5/assignment5/input.lisp" title="input.lisp" tooltip="assignment5/input.lisp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/assignment5/input.lisp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="981" selectionTopPixel="68"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainForRunning.java" partName="MainForRunning.java" path="/home/wesley/git/C152_5/assignment5/src/MainForRunning.java" title="MainForRunning.java" tooltip="assignment5/src/MainForRunning.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/assignment5/src/MainForRunning.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="87" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Print.java" partName="Print.java" path="/home/wesley/git/C152_5/assignment5/src/backend/Print.java" title="Print.java" tooltip="assignment5/src/backend/Print.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/assignment5/src/backend/Print.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="87" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CSScanner.java" partName="CSScanner.java" path="/home/wesley/git/C152_5/assignment5/src/frontend/CSScanner.java" title="CSScanner.java" tooltip="assignment5/src/frontend/CSScanner.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/assignment5/src/frontend/CSScanner.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="87" selectionTopPixel="0"/>
-</editor>
 <editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Parse.java" partName="Parse.java" path="/home/wesley/git/C152_5/assignment5/src/frontend/Parse.java" title="Parse.java" tooltip="assignment5/src/frontend/Parse.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/assignment5/src/frontend/Parse.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="818" selectionTopPixel="233"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Token.java" partName="Token.java" path="/home/wesley/git/C152_5/assignment5/src/frontend/Token.java" title="Token.java" tooltip="assignment5/src/frontend/Token.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/assignment5/src/frontend/Token.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="87" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TokenType.java" partName="TokenType.java" path="/home/wesley/git/C152_5/assignment5/src/frontend/TokenType.java" title="TokenType.java" tooltip="assignment5/src/frontend/TokenType.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/assignment5/src/frontend/TokenType.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="87" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Symbol.java" partName="Symbol.java" path="/home/wesley/git/C152_5/assignment5/src/intermediate/Symbol.java" title="Symbol.java" tooltip="assignment5/src/intermediate/Symbol.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/assignment5/src/intermediate/Symbol.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="87" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SymbolTable.java" partName="SymbolTable.java" path="/home/wesley/git/C152_5/assignment5/src/intermediate/SymbolTable.java" title="SymbolTable.java" tooltip="assignment5/src/intermediate/SymbolTable.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/assignment5/src/intermediate/SymbolTable.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="87" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TopLvlItem.java" partName="TopLvlItem.java" path="/home/wesley/git/C152_5/assignment5/src/intermediate/TopLvlItem.java" title="TopLvlItem.java" tooltip="assignment5/src/intermediate/TopLvlItem.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/assignment5/src/intermediate/TopLvlItem.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="87" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Tree.java" partName="Tree.java" path="/home/wesley/git/C152_5/assignment5/src/intermediate/Tree.java" title="Tree.java" tooltip="assignment5/src/intermediate/Tree.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/assignment5/src/intermediate/Tree.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="87" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.ui.DefaultTextEditor" name="output.txt" partName="output.txt" path="/home/wesley/git/C152_5/assignment5/doc/output.txt" title="output.txt" tooltip="assignment5/doc/output.txt" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/assignment5/doc/output.txt"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.ui.DefaultTextEditor" name="output.txt" partName="output.txt" path="/home/wesley/git/C152_5/assignment5/src/output.txt" title="output.txt" tooltip="assignment5/src/output.txt" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/assignment5/src/output.txt"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3262" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Program.java" partName="Program.java" path="/home/wesley/git/C152_5/assignment5/src/intermediate/Program.java" title="Program.java" tooltip="assignment5/src/intermediate/Program.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/assignment5/src/intermediate/Program.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="561" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -166,7 +101,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -362,179 +297,10 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/frontend/TokenType.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/MainForRunning.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/backend/Print.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/frontend/CSScanner.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/frontend/Parse.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/frontend/Token.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/intermediate/Node.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/intermediate/Symbol.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/intermediate/SymbolTable.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/intermediate/TopLvlItem.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/intermediate/Tree.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/assignment5/doc/output.txt"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/assignment5/src/output.txt"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/intermediate/Node.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/intermediate/Symbol.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/intermediate/SymbolTable.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/intermediate/TopLvlItem.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/intermediate/Tree.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/frontend/Parse.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/intermediate/program.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/intermediate/Program.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/intermediate/Symbol.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/intermediate/TopLvlItem.java"/>
 </editors>
-<item historyLabel="MainForRunning.java" index="1">
-<position info="not_deleted" x="0" y="87"/>
-</item>
-<item historyLabel="Print.java" index="2">
-<position info="not_deleted" x="87" y="0"/>
-</item>
-<item historyLabel="CSScanner.java" index="3">
-<position info="not_deleted" x="87" y="0"/>
-</item>
-<item historyLabel="Parse.java" index="4">
-<position info="not_deleted" x="87" y="0"/>
-</item>
-<item historyLabel="Token.java" index="5">
-<position info="not_deleted" x="87" y="0"/>
-</item>
-<item historyLabel="TokenType.java" index="0">
-<position info="not_deleted" x="87" y="0"/>
-</item>
-<item historyLabel="Node.java" index="6">
-<position info="not_deleted" x="87" y="0"/>
-</item>
-<item historyLabel="Symbol.java" index="7">
-<position info="not_deleted" x="87" y="0"/>
-</item>
-<item historyLabel="SymbolTable.java" index="8">
-<position info="not_deleted" x="87" y="0"/>
-</item>
-<item historyLabel="TopLvlItem.java" index="9">
-<position info="not_deleted" x="87" y="0"/>
-</item>
-<item historyLabel="Tree.java" index="10">
-<position info="not_deleted" x="87" y="0"/>
-</item>
-<item historyLabel="output.txt" index="11">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="output.txt" index="12">
-<position info="not_deleted" x="3262" y="0"/>
-</item>
-<item historyLabel="Node.java" index="13">
+<item active="true" historyLabel="Parse.java" index="0">
 <position info="not_deleted" x="3" y="0"/>
-</item>
-<item historyLabel="Node.java" index="13">
-<position info="not_deleted" x="87" y="0"/>
-</item>
-<item historyLabel="output.txt" index="12">
-<position info="not_deleted" x="3262" y="0"/>
-</item>
-<item historyLabel="Symbol.java" index="14">
-<position info="not_deleted" x="3" y="0"/>
-</item>
-<item historyLabel="Symbol.java" index="14">
-<position info="not_deleted" x="87" y="0"/>
-</item>
-<item historyLabel="SymbolTable.java" index="15">
-<position info="not_deleted" x="3" y="0"/>
-</item>
-<item historyLabel="SymbolTable.java" index="15">
-<position info="not_deleted" x="87" y="0"/>
-</item>
-<item historyLabel="Symbol.java" index="14">
-<position info="not_deleted" x="87" y="0"/>
-</item>
-<item historyLabel="SymbolTable.java" index="15">
-<position info="not_deleted" x="87" y="0"/>
-</item>
-<item historyLabel="TopLvlItem.java" index="16">
-<position info="not_deleted" x="3" y="0"/>
-</item>
-<item historyLabel="TopLvlItem.java" index="16">
-<position info="not_deleted" x="87" y="0"/>
-</item>
-<item historyLabel="Tree.java" index="17">
-<position info="not_deleted" x="3" y="0"/>
-</item>
-<item historyLabel="Tree.java" index="17">
-<position info="not_deleted" x="87" y="0"/>
-</item>
-<item historyLabel="Parse.java" index="18">
-<position info="not_deleted" x="3" y="0"/>
-</item>
-<item historyLabel="Parse.java" index="18">
-<position info="not_deleted" x="87" y="0"/>
-</item>
-<item historyLabel="program.java" index="19">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="program.java" index="19">
-<position/>
-</item>
-<item historyLabel="Program.java" index="20">
-<position info="not_deleted" x="232" y="0"/>
-</item>
-<item historyLabel="Program.java" index="20">
-<position info="not_deleted" x="226" y="0"/>
-</item>
-<item historyLabel="Program.java" index="20">
-<position info="not_deleted" x="170" y="0"/>
-</item>
-<item historyLabel="Program.java" index="20">
-<position info="not_deleted" x="114" y="0"/>
-</item>
-<item historyLabel="Program.java" index="20">
-<position info="not_deleted" x="530" y="0"/>
-</item>
-<item historyLabel="Program.java" index="20">
-<position info="not_deleted" x="561" y="0"/>
-</item>
-<item historyLabel="Symbol.java" index="21">
-<position info="not_deleted" x="3" y="0"/>
-</item>
-<item historyLabel="Symbol.java" index="21">
-<position info="not_deleted" x="87" y="0"/>
-</item>
-<item historyLabel="Program.java" index="20">
-<position info="not_deleted" x="560" y="0"/>
-</item>
-<item historyLabel="Program.java" index="20">
-<position info="not_deleted" x="559" y="0"/>
-</item>
-<item historyLabel="Program.java" index="20">
-<position info="not_deleted" x="546" y="0"/>
-</item>
-<item historyLabel="Program.java" index="20">
-<position info="not_deleted" x="561" y="0"/>
-</item>
-<item historyLabel="Parse.java" index="18">
-<position info="not_deleted" x="654" y="0"/>
-</item>
-<item historyLabel="TopLvlItem.java" index="22">
-<position info="not_deleted" x="3" y="0"/>
-</item>
-<item historyLabel="TopLvlItem.java" index="22">
-<position info="not_deleted" x="87" y="0"/>
-</item>
-<item historyLabel="Parse.java" index="18">
-<position info="not_deleted" x="439" y="0"/>
-</item>
-<item historyLabel="Program.java" index="20">
-<position info="not_deleted" x="561" y="0"/>
-</item>
-<item historyLabel="Parse.java" index="18">
-<position info="not_deleted" x="818" y="0"/>
-</item>
-<item historyLabel="Program.java" index="20">
-<position info="not_deleted" x="561" y="0"/>
-</item>
-<item active="true" historyLabel="Parse.java" index="18">
-<position info="not_deleted" x="818" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -554,6 +320,12 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Parse.java" tooltip="assignment5/src/frontend/Parse.java">
+<persistable path="/assignment5/src/frontend/Parse.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Node.java" tooltip="assignment5/src/intermediate/Node.java">
+<persistable path="/assignment5/src/intermediate/Node.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="program.java" tooltip="assignment5/src/intermediate/program.java">
 <persistable path="/assignment5/src/intermediate/program.java"/>
 </file>
@@ -575,17 +347,11 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Symbol.java" tooltip="assignment5/src/intermediate/Symbol.java">
 <persistable path="/assignment5/src/intermediate/Symbol.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Node.java" tooltip="assignment5/src/intermediate/Node.java">
-<persistable path="/assignment5/src/intermediate/Node.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TokenType.java" tooltip="assignment5/src/frontend/TokenType.java">
 <persistable path="/assignment5/src/frontend/TokenType.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Token.java" tooltip="assignment5/src/frontend/Token.java">
 <persistable path="/assignment5/src/frontend/Token.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Parse.java" tooltip="assignment5/src/frontend/Parse.java">
-<persistable path="/assignment5/src/frontend/Parse.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CSScanner.java" tooltip="assignment5/src/frontend/CSScanner.java">
 <persistable path="/assignment5/src/frontend/CSScanner.java"/>
