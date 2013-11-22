@@ -15,7 +15,10 @@ public class Print {
 	public Print() {
 	}
 
-	public void interp(Program pro) {
+	public void interp(Program pro) 
+	{
+		Executor exec = new Executor(pro);
+		exec.run();
 		System.out.println("Printing Tree");
 		System.out.println("(");
 		for (TopLvlItem tli : pro.getProlist()) {
