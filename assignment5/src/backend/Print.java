@@ -37,6 +37,10 @@ public class Print {
 
 	private void exc(Node n) {
 		// System.out.println("exc");
+		if (n==null) {
+			System.out.println("Scheme: null exception");
+			return;
+		}
 		if (n.getParent() == null) {
 			// Top most node
 			System.out.println(n.getValue());

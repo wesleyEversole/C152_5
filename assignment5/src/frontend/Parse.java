@@ -33,46 +33,15 @@ public class Parse {
 		Token t = null;
 		Node n = null;
 		while (true) {
-			// Find opening paren
-			while (t == null || t.getType() != TokenType.OPEN_LIST) {
-				t = scan.nextToken();
-
-				if (t.getType() == TokenType.EOF) {
-					System.out.println("Failed to find OPEN_LIST");
-					return pro;
-				}
-			}
-
-			n = new Node(null);
-			n.setValue(t);
-			System.out.println("First Node:"+n.getType());
-			//n.setLeft(new Node(n));
-			//TLI.getMainForm().setNode(n);
-
-			parenLvl = 1;
+			parenLvl = 0;
 			biCnt = 0;
-			// while (parenLvl > 0) {
-			// System.out.println("+++node=" + n.getValue() + " type="
-			// + n.getType());
 
-			n = buildItem(scan.nextToken(), n); //TLI.getMainForm().getNode()
+			n = buildItem(scan.nextToken(), new Node(null)); //TLI.getMainForm().getNode()
 			TLI.getMainForm().setNode(n);
-			System.out.println("Node after buildItem:"+n.getType());
-			// System.out.println("///////Node value:" + n.getValue() + " type="
-			// + n.getType() + " parenLvl=" + parenLvl);
-			// }
-			// clean up the current TLI item...
-			// (define items go into the symbol table
-			// (lambda ?
-			// (let* ?
-			//
-			// System.out.println("Clean up tli");
-			// if (TLI.getMT().getNode().getLeft().getValue()) {
 
-			// }
 			pro.getProlist().add(TLI);
 			TLI = new TopLvlItem(new Tree(new Node(null)), new SymbolTable());
-			System.out.println("Another top level");
+			//System.out.println("Another top level");
 			if (n.getType()==TokenType.EOF) {
 				return pro;
 			}
@@ -83,7 +52,7 @@ public class Parse {
 
 	private Node buildItem(Token t, Node n) {
 		biCnt++;
-		System.out.println("BI: "+biCnt);
+		System.out.print("BI: "+biCnt+ " ");
 		if (notsafe(t, n)) {
 			n.setValue(t);
 			biCnt--;
@@ -155,18 +124,23 @@ public class Parse {
 
 	private void other(Token t, Node n) {
 		System.out.println("\tOT value:" + t.getValue() + " type:" + t.getType());
-		//n.setValue(t);
-		n.setLeft(new Node(n));
-		n.getLeft().setValue(t);
+		n.setValue(t);
+		if(n==n.getParent().getLeft()) {
+			// we are a left node
+			n = n.getParent(); // return to our parent
+		}
+		//n.setLeft(new Node(n));
+		//n.getLeft().setValue(t);
 		
 		// fill symbol table here
 		if (t.getType() == TokenType.SYMBOL) {
-			pro.addSysmbol(t.getValue(), new ObjectValue(
+			pro.addSymbol(t.getValue(), new ObjectValue(ObjectType.SCHEME_SYMBOL,
 					ObjectType.SCHEME_SYMBOL));
 		}
 		//
 		n.setRight(new Node(n));
-		buildItem(scan.nextToken(), n.getRight());
+		n.getRight().setLeft(new Node(n.getRight()));
+		buildItem(scan.nextToken(), n.getRight().getLeft());
 		// System.out.println("Right exit");
 	}
 

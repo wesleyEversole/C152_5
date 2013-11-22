@@ -10,10 +10,10 @@ public class Token {
 	private TokenType type;
 
 	public Token(String s) {
-		System.out.print("Construct token " + s);
+		//System.out.print("Construct token " + s);
 		value = s;
 		setType(s);
-		System.out.println(" Type:" + type);
+		//System.out.println(" Type:" + type);
 	}
 
 	private void setType(String s) {
@@ -178,7 +178,7 @@ public class Token {
 
 			if (s.matches("^[-+]?\\d*\\.?\\d*([eEfFgG][-+]?\\d+)?$")) {
 				type = TokenType.NUMBER;
-				System.out.println("in token number:" + s);
+				//System.out.println("in token number:" + s);
 
 			} else if (s.matches("\"[^\"]+\"")) {
 				// string but embedded " not supported
@@ -189,6 +189,7 @@ public class Token {
 			}
 			break;
 		}
+		value = s;
 	}
 
 	public String getValue() {

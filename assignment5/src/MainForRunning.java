@@ -22,9 +22,9 @@ public class MainForRunning {
 		Program prog;
 		System.out.println("call Frontend");
 		prog = p.buildTopLvl();
-		System.out.println("Backend printing");
-		prt.interp(prog);
-		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++");
+		//System.out.println("Backend printing");
+		//prt.interp(prog);
+		System.out.println("\n++++++++++++++++++++++++++++++++++++++++++++++++++");
 		interp = new Executor(prog);
 		interp.run();
 	}

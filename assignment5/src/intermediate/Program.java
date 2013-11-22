@@ -33,7 +33,7 @@ public class Program {
 		TLST = tLST;
 	}
 
-	public void addSysmbol(String name, Object o) {
+	public void addSymbol(String name, Object o) {
 		TLST.add(name, (ObjectValue) o);
 
 	}
