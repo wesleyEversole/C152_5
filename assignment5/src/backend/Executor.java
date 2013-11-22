@@ -7,11 +7,8 @@ public class Executor {
 
 	private Print prt = new Print(); // list printer
 	private Program prog;
-<<<<<<< HEAD
-=======
 	private SymbolTable topTable;
 
->>>>>>> ad52af7035e975ce33e686a148961f5a37462f77
 	// Will have tree and top-level symbols
 	public Executor(Program proj) {
 		prog = proj;
@@ -33,12 +30,6 @@ public class Executor {
 		Node result = null;
 		// missing tail recursion
 		switch (form.getLeft().getType()) {
-<<<<<<< HEAD
-		case CAR: result = car(form);break;
-		case CDR: result = cdr(form);break;
-		case NULL: result = nullCheck(form); break;
-		default: result = form;
-=======
 		case CAR:
 			result = car(form);
 			break;
@@ -47,7 +38,6 @@ public class Executor {
 			break;
 		default:
 			result = form;
->>>>>>> ad52af7035e975ce33e686a148961f5a37462f77
 		}
 		prt.print(result);
 	}
@@ -59,15 +49,12 @@ public class Executor {
 	private Node cdr(Node form) {
 		return form.getRight();
 	}
-<<<<<<< HEAD
 	
 	private Node nullCheck(Node form)
 	{
 		
 		return null;
 	}
-	
-=======
 
 	// returns tail of current node
 	// actually parent of tail
@@ -81,7 +68,6 @@ public class Executor {
 		
 	}
 
->>>>>>> ad52af7035e975ce33e686a148961f5a37462f77
 	private Node plus(Node form) {
 		// does error check for ill formed
 		Node c1 = form.getRight();
@@ -90,7 +76,6 @@ public class Executor {
 
 		Node result = new Node(null);
 		result.setValue(new Token(new Double(a1 + a2).toString()));
-<<<<<<< HEAD
 		return result;
 	}
 	
@@ -121,21 +106,16 @@ public class Executor {
 		
 		Node result = new Node(null);
 		result.setValue(new Token(new Double(s1 / s2).toString()));
-=======
->>>>>>> ad52af7035e975ce33e686a148961f5a37462f77
+
 		return result;
 	}
 
 	private Node define(Node form) {
-<<<<<<< HEAD
 		Node define = new Node(form);
 		while (form.getRight().getType() != TokenType.CLOSE_BRACKET)
 		{
 			
 		}
-=======
-		// dummy
->>>>>>> ad52af7035e975ce33e686a148961f5a37462f77
 		return form;
 	}
 }
