@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="24" version="2.0">
+<workbench progressCount="28" version="2.0">
 <workbenchAdvisor/>
-<window height="764" maximized="true" width="1020" x="0" y="0">
+<window height="764" maximized="true" width="1020" x="1539" y="130">
 <fastViewData fastViewLocation="1024">
 <orientation position="512" view="org.eclipse.egit.ui.RepositoriesView"/>
 </fastViewData>
@@ -16,7 +16,7 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="124" y="25"/>
 <coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="34" y="25"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="25"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="104" y="25"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="132" y="25"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="106" y="25"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="25"/>
@@ -34,13 +34,28 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Parse.java" partName="Parse.java" path="/home/wesley/git/C152_5/assignment5/src/frontend/Parse.java" title="Parse.java" tooltip="assignment5/src/frontend/Parse.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Parse.java" partName="Parse.java" path="/home/wesley/git/C152_5/assignment5/src/frontend/Parse.java" title="Parse.java" tooltip="assignment5/src/frontend/Parse.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/assignment5/src/frontend/Parse.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2261" selectionTopPixel="1430"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Print.java" partName="Print.java" path="/home/wesley/git/C152_5/assignment5/src/backend/Print.java" title="Print.java" tooltip="assignment5/src/backend/Print.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/assignment5/src/backend/Print.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2161" selectionTopPixel="1056"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="test1.lsp" partName="test1.lsp" path="/home/wesley/git/C152_5/assignment5/test1.lsp" title="test1.lsp" tooltip="assignment5/test1.lsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/assignment5/test1.lsp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Executor.java" partName="Executor.java" path="/home/wesley/git/C152_5/assignment5/src/backend/Executor.java" title="Executor.java" tooltip="assignment5/src/backend/Executor.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/assignment5/src/backend/Executor.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1318" selectionTopPixel="631"/>
 </editor>
 </editors>
 <views>
@@ -101,7 +116,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.egit.ui.RepositoriesView" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -237,7 +252,7 @@
 <layout>
 <mainWindow>
 <info folder="true" part="left">
-<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.egit.ui.RepositoriesView" appearance="2" expanded="2">
 <page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
 <page content="org.eclipse.egit.ui.RepositoriesView" label="Git Repositories"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
@@ -258,7 +273,7 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.24950495" ratioLeft="252" ratioRight="758" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.6393939" ratioLeft="422" ratioRight="238" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottom" ratio="0.5555556" ratioLeft="540" ratioRight="432" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
@@ -298,9 +313,78 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/frontend/Parse.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/backend/Print.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/assignment5/test1.lsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/assignment5/src/backend/Executor.java"/>
 </editors>
-<item active="true" historyLabel="Parse.java" index="0">
+<item historyLabel="Parse.java" index="0">
 <position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="Print.java" index="1">
+<position info="not_deleted" x="3" y="0"/>
+</item>
+<item historyLabel="Print.java" index="1">
+<position/>
+</item>
+<item historyLabel="Print.java" index="1">
+<position info="not_deleted" x="1057" y="0"/>
+</item>
+<item historyLabel="Print.java" index="1">
+<position/>
+</item>
+<item historyLabel="Print.java" index="1">
+<position/>
+</item>
+<item historyLabel="Print.java" index="1">
+<position info="not_deleted" x="1364" y="0"/>
+</item>
+<item historyLabel="Print.java" index="1">
+<position info="not_deleted" x="1449" y="0"/>
+</item>
+<item historyLabel="Print.java" index="1">
+<position info="not_deleted" x="1443" y="0"/>
+</item>
+<item historyLabel="Print.java" index="1">
+<position info="not_deleted" x="1436" y="0"/>
+</item>
+<item historyLabel="Print.java" index="1">
+<position info="not_deleted" x="1494" y="0"/>
+</item>
+<item historyLabel="Print.java" index="1">
+<position info="not_deleted" x="2225" y="0"/>
+</item>
+<item historyLabel="Parse.java" index="0">
+<position info="not_deleted" x="3822" y="0"/>
+</item>
+<item historyLabel="Parse.java" index="0">
+<position info="not_deleted" x="3066" y="0"/>
+</item>
+<item historyLabel="test1.lsp" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Parse.java" index="0">
+<position info="not_deleted" x="3955" y="0"/>
+</item>
+<item historyLabel="Print.java" index="1">
+<position info="not_deleted" x="2161" y="0"/>
+</item>
+<item historyLabel="Parse.java" index="0">
+<position info="not_deleted" x="3955" y="0"/>
+</item>
+<item historyLabel="Parse.java" index="0">
+<position info="not_deleted" x="2261" y="0"/>
+</item>
+<item historyLabel="Executor.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Executor.java" index="3">
+<position info="not_deleted" x="1322" y="0"/>
+</item>
+<item historyLabel="Executor.java" index="3">
+<position info="not_deleted" x="1302" y="0"/>
+</item>
+<item active="true" historyLabel="Executor.java" index="3">
+<position info="not_deleted" x="1300" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -320,6 +404,15 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Executor.java" tooltip="assignment5/src/backend/Executor.java">
+<persistable path="/assignment5/src/backend/Executor.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="test1.lsp" tooltip="assignment5/test1.lsp">
+<persistable path="/assignment5/test1.lsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Print.java" tooltip="assignment5/src/backend/Print.java">
+<persistable path="/assignment5/src/backend/Print.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Parse.java" tooltip="assignment5/src/frontend/Parse.java">
 <persistable path="/assignment5/src/frontend/Parse.java"/>
 </file>
@@ -355,15 +448,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CSScanner.java" tooltip="assignment5/src/frontend/CSScanner.java">
 <persistable path="/assignment5/src/frontend/CSScanner.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Print.java" tooltip="assignment5/src/backend/Print.java">
-<persistable path="/assignment5/src/backend/Print.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainForRunning.java" tooltip="assignment5/src/MainForRunning.java">
-<persistable path="/assignment5/src/MainForRunning.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="input.txt" tooltip="assignment5/input.txt">
-<persistable path="/assignment5/input.txt"/>
 </file>
 </mruList>
 </workbench>
