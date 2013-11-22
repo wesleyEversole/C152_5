@@ -13,10 +13,7 @@ import intermediate.*;
 
 public class Print {
 	String indent = "";
-
-	public Print() {
-	}
-
+	
 	public void interp(Program pro) {
 
 		// System.out.println("(");

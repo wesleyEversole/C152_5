@@ -1,20 +1,16 @@
 package backend;
 
-import java.util.Map.Entry;
-
 import intermediate.*;
 import frontend.*;
 
 public class Executor {
 
-	private Print prt=new Print(); // list printer
+	private Print prt = new Print(); // list printer
 	private Program prog;
-	private SymbolTable topTable;
 	// Will have tree and top-level symbols
 	public Executor(Program proj)
 	{
 		prog = proj;
-		topTable = proj.getTLST();
 	}
 	
 	public void run()
@@ -35,6 +31,7 @@ public class Executor {
 		switch (form.getLeft().getType()) {
 		case CAR: result = car(form);break;
 		case CDR: result = cdr(form);break;
+		case NULL: result = nullCheck(form); break;
 		default: result = form;
 		}
 		prt.print(result);
@@ -50,6 +47,12 @@ public class Executor {
 		return form.getRight();
 	}
 	
+	private Node nullCheck(Node form)
+	{
+		
+		return null;
+	}
+	
 	private Node plus(Node form) {
 		// does error check for ill formed
 		Node c1 = form.getRight();
@@ -57,12 +60,46 @@ public class Executor {
 		Double a2 = new Double(c1.getRight().getLeft().getValue());
 		
 		Node result = new Node(null);
-		result.setValue(new Token(new Double(a1+a2).toString()));
+		result.setValue(new Token(new Double(a1 + a2).toString()));
+		return result;
+	}
+	
+	private Node minus(Node form) {
+		Node c1 = form.getRight();
+		Double s1 = new Double(c1.getLeft().getValue());
+		Double s2 = new Double(c1.getRight().getLeft().getValue());
+		
+		Node result = new Node(null);
+		result.setValue(new Token(new Double(s1 - s2).toString()));
+		return result;
+	}
+	
+	private Node multiply(Node form) {
+		Node c1 = form.getRight();
+		Double s1 = new Double(c1.getLeft().getValue());
+		Double s2 = new Double(c1.getRight().getLeft().getValue());
+		
+		Node result = new Node(null);
+		result.setValue(new Token(new Double(s1 * s2).toString()));
+		return result;
+	}
+	
+	private Node divide(Node form) {
+		Node c1 = form.getRight();
+		Double s1 = new Double(c1.getLeft().getValue());
+		Double s2 = new Double(c1.getRight().getLeft().getValue());
+		
+		Node result = new Node(null);
+		result.setValue(new Token(new Double(s1 / s2).toString()));
 		return result;
 	}
 	
 	private Node define(Node form) {
-		//dummy
+		Node define = new Node(form);
+		while (form.getRight().getType() != TokenType.CLOSE_BRACKET)
+		{
+			
+		}
 		return form;
 	}
 }

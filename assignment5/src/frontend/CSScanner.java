@@ -5,10 +5,6 @@
  */
 package frontend;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
-
 public class CSScanner {
 	private Source src;
 	private char ch;
