@@ -10,10 +10,10 @@
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.security.KeyStore.Entry"/>
 <fullyQualifiedTypeName name="java.util.Map.Entry"/>
-<fullyQualifiedTypeName name="frontend.TokenType"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="intermediate.SymbolTable"/>
 <fullyQualifiedTypeName name="intermediate.TopLvlItem"/>
 <fullyQualifiedTypeName name="intermediate.Program"/>
+<fullyQualifiedTypeName name="frontend.TokenType"/>
 </qualifiedTypeNameHistroy>
