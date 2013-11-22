@@ -19,7 +19,7 @@ public class Print {
 		System.out.println("Printing Tree");
 		System.out.println("(");
 		for (TopLvlItem tli : pro.getProlist()) {
-			exc(tli.getMT().getNode());
+			exc(tli.getMainForm().getNode());
 			System.out.println("Printing End of Tree\n");
 			System.out.println("Printing SymbolTable");
 			for (Entry<String, ObjectValue> entry : tli.getMST().entrySet()) {
@@ -28,7 +28,10 @@ public class Print {
 		}
 
 	}
-
+    public void print(Node n) {
+    	exc(n);
+    }
+    
 	private void exc(Node n) {
 		// System.out.println("exc");
 		if (n.getLeft() != null) {

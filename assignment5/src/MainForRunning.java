@@ -18,11 +18,14 @@ public class MainForRunning {
 		// test parser
 		Parse p = new Parse(args[0]);
 		Print prt = new Print();
+		Interp i = new Interp();
 		Program tli;
 		System.out.println("call Frontend");
 		tli = p.buildTopLvl();
 		System.out.println("Backend printing");
 		prt.interp(tli);
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++");
+		i.interp(tli);
 
 	}
 

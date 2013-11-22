@@ -6,27 +6,27 @@
 package intermediate;
 
 public class TopLvlItem {
-	Tree MT;
-	SymbolTable MST;
+	Tree mainForm;
+	SymbolTable formSymbolTable;
 
-	public TopLvlItem(Tree t, SymbolTable st) {
-		MT = t;
-		MST = st;
+	public TopLvlItem(Tree t, SymbolTable symbolTable) {
+		mainForm = t;
+		formSymbolTable = symbolTable;
 	}
 
-	public Tree getMT() {
-		return MT;
+	public Tree getMainForm() {
+		return mainForm;
 	}
 
-	public void setMT(Tree mT) {
-		MT = mT;
+	public void setMainForm(Tree form) {
+		mainForm = form;
 	}
 
 	public SymbolTable getMST() {
-		return MST;
+		return formSymbolTable;
 	}
 
 	public void setMST(SymbolTable mST) {
-		MST = mST;
+		formSymbolTable = mST;
 	}
 }

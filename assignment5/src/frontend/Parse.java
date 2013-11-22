@@ -49,7 +49,7 @@ public class Parse {
 			}
 			n = new Node(null);
 			n.setValue(t);
-			TLI.getMT().setNode(n);
+			TLI.getMainForm().setNode(n);
 
 			parenLvl = 1;
 			biCnt = 0;
@@ -57,8 +57,8 @@ public class Parse {
 			// System.out.println("+++node=" + n.getValue() + " type="
 			// + n.getType());
 
-			n = buildItem(scan.nextToken(), TLI.getMT().getNode());
-			TLI.getMT().setNode(n);
+			n = buildItem(scan.nextToken(), TLI.getMainForm().getNode());
+			TLI.getMainForm().setNode(n);
 			// System.out.println("///////Node value:" + n.getValue() + " type="
 			// + n.getType() + " parenLvl=" + parenLvl);
 			// }
