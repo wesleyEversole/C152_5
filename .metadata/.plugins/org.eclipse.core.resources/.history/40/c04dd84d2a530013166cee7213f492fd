@@ -1,0 +1,19 @@
+package backend;
+
+import intermediate.ObjectValue;
+import intermediate.Program;
+import intermediate.TopLvlItem;
+
+import java.util.Map.Entry;
+
+public class interp {
+
+	Print prt=new Print();
+	public void interp(Program pro) {
+		for (TopLvlItem tli : pro.getProlist()) {
+			// if a list print it
+			prt.print(tli.getMT().getNode());
+		}
+
+	}
+}

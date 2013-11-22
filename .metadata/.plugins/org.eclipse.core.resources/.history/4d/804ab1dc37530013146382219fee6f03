@@ -1,0 +1,21 @@
+package backend;
+
+import intermediate.*;
+
+import java.util.Map.Entry;
+
+public class Interp {
+
+	Print prt=new Print();
+	SymbolTable TLS = null;
+	public void interp(Program pro) {
+		// grab top level symbol table
+		TLS = pro.getTLST();
+		
+		for (TopLvlItem tli : pro.getProlist()) {
+			Node form = tli.getMainForm().getNode(); // get a program form
+			prt.print(form);
+		}
+
+	}
+}

@@ -88,7 +88,7 @@ public class CSScanner {
 		while (!Character.isSpaceChar(ch)) {
 			if (Character.getNumericValue(ch) == -1) {
 				ch = 0;
-				System.out.println("we got -1 !");
+				//System.out.println("we got -1 !");
 				return "\0";
 			}
 

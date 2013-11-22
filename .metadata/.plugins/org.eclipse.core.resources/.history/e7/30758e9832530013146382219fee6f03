@@ -1,0 +1,47 @@
+package backend;
+
+import java.util.Map.Entry;
+
+import intermediate.Node;
+import intermediate.ObjectValue;
+import intermediate.Program;
+import intermediate.SymbolTable;
+import intermediate.TopLvlItem;
+
+public class Executor {
+
+	private Print prt=new Print(); // list printer
+	private Program prog;
+	private SymbolTable topTable;
+	// Will have tree and top-level symbols
+	public Executor(Program proj)
+	{
+		prog = proj;
+		topTable = proj.getTLST();
+	}
+	
+	public void run()
+	{
+		// execution loop
+		for (TopLvlItem formItem : prog.getProlist()) {
+			execute(formItem);
+		}
+	
+	}
+	
+	private void execute(TopLvlItem formItem) {
+		Node form = formItem.getMainForm().getNode(); // get a program form
+		SymbolTable formSymbolTable = formItem.getMST(); // get the forms symbolTable
+		prt.print(form);
+	}
+	
+	private static void car()
+	{
+		
+	}
+	
+	private static void cdr()
+	{
+		
+	}
+}

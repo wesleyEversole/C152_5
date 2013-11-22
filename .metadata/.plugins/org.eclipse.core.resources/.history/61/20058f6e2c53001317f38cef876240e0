@@ -1,0 +1,26 @@
+package backend;
+
+import intermediate.ObjectValue;
+import intermediate.Program;
+import intermediate.SymbolTable;
+import intermediate.TopLvlItem;
+
+import java.util.Map.Entry;
+
+import javax.xml.soap.Node;
+
+public class Interp {
+
+	Print prt=new Print();
+	SymbolTable TLS = null;
+	public void interp(Program pro) {
+		// grab top level symbol table
+		TLS = pro.getTLST();
+		
+		for (TopLvlItem tli : pro.getProlist()) {
+			Node form = (Node) tli.getMT().getNode(); // get a program form
+			prt.print(form);
+		}
+
+	}
+}

@@ -10,7 +10,7 @@ public class Token {
 	private TokenType type;
 
 	public Token(String s) {
-		System.out.print("Construct token" + s);
+		System.out.print("Construct token " + s);
 		value = s;
 		setType(s);
 		System.out.println(" Type:" + type);
@@ -79,8 +79,14 @@ public class Token {
 		case "BREAK-VAR":
 			type = TokenType.BREAK_VAR;
 			break;
+		case "CAR":
+			type = TokenType.CAR;
+			break;
 		case "CASE":
 			type = TokenType.CASE;
+			break;
+		case "CDR":
+			type = TokenType.CDR;
 			break;
 		case "COND":
 			type = TokenType.COND;

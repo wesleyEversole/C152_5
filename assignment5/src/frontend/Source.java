@@ -39,7 +39,7 @@ public class Source {
 	 * @return the next character.
 	 */
 	public char nextChar() {
-		System.out.println("nextChar(source)");
+		//System.out.println("nextChar(source)");
 		// If the line is null or we're off its end,
 		// read the next line.
 		if ((line == null) || (index >= line.length())) {

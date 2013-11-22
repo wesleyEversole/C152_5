@@ -32,24 +32,22 @@ public class Parse {
 	public Program buildTopLvl() {
 		Token t = null;
 		Node n = null;
-		while (n == null || n.getType() != TokenType.EOF) {
-			if (n != null) {
-				// System.out.println("node=" + n.getValue());
-			}
+		while (true) {
 			// Find opening paren
 			while (t == null || t.getType() != TokenType.OPEN_LIST) {
 				t = scan.nextToken();
 
 				if (t.getType() == TokenType.EOF) {
+					System.out.println("Failed to find OPEN_LIST");
 					return pro;
 				}
 			}
-			if (n != null) {
-				// System.out.println("+node=" + n.getValue());
-			}
+
 			n = new Node(null);
 			n.setValue(t);
-			TLI.getMainForm().setNode(n);
+			System.out.println("First Node:"+n.getType());
+			//n.setLeft(new Node(n));
+			//TLI.getMainForm().setNode(n);
 
 			parenLvl = 1;
 			biCnt = 0;
@@ -57,8 +55,9 @@ public class Parse {
 			// System.out.println("+++node=" + n.getValue() + " type="
 			// + n.getType());
 
-			n = buildItem(scan.nextToken(), TLI.getMainForm().getNode());
+			n = buildItem(scan.nextToken(), n); //TLI.getMainForm().getNode()
 			TLI.getMainForm().setNode(n);
+			System.out.println("Node after buildItem:"+n.getType());
 			// System.out.println("///////Node value:" + n.getValue() + " type="
 			// + n.getType() + " parenLvl=" + parenLvl);
 			// }
@@ -74,17 +73,17 @@ public class Parse {
 			pro.getProlist().add(TLI);
 			TLI = new TopLvlItem(new Tree(new Node(null)), new SymbolTable());
 			System.out.println("Another top level");
-			// n = null;
+			if (n.getType()==TokenType.EOF) {
+				return pro;
+			}
 		}
-		// Clean up the structure here
-		return pro;
 	}
 
 	Integer biCnt;
 
 	private Node buildItem(Token t, Node n) {
 		biCnt++;
-		// System.out.println("BI: "+biCnt);
+		System.out.println("BI: "+biCnt);
 		if (notsafe(t, n)) {
 			n.setValue(t);
 			biCnt--;
@@ -128,14 +127,6 @@ public class Parse {
 		return false;
 	}
 
-	private void assignment5code(Token t) {
-		if (t.getType() == TokenType.SPACE) {
-			// System.out.println("Token " + "Space");
-		} else {
-			// System.out.println("Token " + t.getValue());
-		}
-	}
-
 	private Token removeC_S(Token t) {
 		while (t.getType() == TokenType.COMMENT
 				|| t.getType() == TokenType.SPACE) {
@@ -145,9 +136,12 @@ public class Parse {
 	}
 
 	private void closeL(Token t, Node n) {
-		// System.out.println("\tCL value:" + t.getValue() + " type:" +
-		// t.getType());
+		System.out.println("\tCL value:" + t.getValue() + " type:" + t.getType());
 		parenLvl--;
+		n.setValue(t);
+		if (parenLvl ==0) {
+			return;
+		}
 		while (n.getParent() != null) {
 			n = n.getParent();
 			if (n.getRight() == null) {
@@ -160,9 +154,11 @@ public class Parse {
 	}
 
 	private void other(Token t, Node n) {
-		// System.out.println("\tOT value:" + t.getValue() + " type:" +
-		// t.getType());
-		n.setValue(t);
+		System.out.println("\tOT value:" + t.getValue() + " type:" + t.getType());
+		//n.setValue(t);
+		n.setLeft(new Node(n));
+		n.getLeft().setValue(t);
+		
 		// fill symbol table here
 		if (t.getType() == TokenType.SYMBOL) {
 			pro.addSysmbol(t.getValue(), new ObjectValue(
@@ -175,11 +171,10 @@ public class Parse {
 	}
 
 	private void openL(Token t, Node n) {
-		// System.out.println("Left entry");
-		// System.out.println("\tOL value:" + t.getValue() + " type:" +
-		// t.getType());
+		System.out.println("\tOL value:" + t.getValue() + " type:" +t.getType());
 		n.setLeft(new Node(n));
 		parenLvl++;
+		n.setValue(t);
 		buildItem(scan.nextToken(), n.getLeft());
 		// System.out.println("Left exit");
 	}
