@@ -86,9 +86,7 @@ public class Executor {
 			break;
 		default:
 			result = form;
-
-
-		}
+}
 		prt.print(result);
 	}
 
@@ -114,9 +112,9 @@ public class Executor {
 	private Node cdr(Node form) {
 		return form.getRight();
 	}
-
-	private Node nullCheck(Node form) {
-
+	
+	private Node nullCheck(Node form)
+	{
 		return null;
 	}
 
@@ -140,7 +138,6 @@ public class Executor {
 
 		Node result = new Node(null);
 		result.setValue(new Token(new Double(a1 + a2).toString()));
-
 		return result;
 	}
 
@@ -174,5 +171,6 @@ public class Executor {
 
 		return result;
 	}
+
 
 }
