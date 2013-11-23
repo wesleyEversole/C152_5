@@ -17,14 +17,10 @@ public class MainForRunning {
 
 		// test parser
 		Parse p = new Parse(args[0]);
-		Print prt = new Print();
 		Executor interp;
 		Program prog;
-		System.out.println("call Frontend");
 		prog = p.buildTopLvl();
-		//System.out.println("Backend printing");
-		//prt.interp(prog);
-		System.out.println("\n++++++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("Toplevel forms:" + prog.getProlist().size());
 		interp = new Executor(prog);
 		interp.run();
 	}

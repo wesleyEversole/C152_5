@@ -1,3 +1,8 @@
+/*
+ * @Author Tim Stullich , Wesley Eversole
+ * Assignment 6 
+ * Project for CS 152
+ */
 package backend;
 
 import java.util.Iterator;
@@ -18,7 +23,24 @@ public class Executor {
 		topTable = proj.getTLST();
 	}
 
+
+		
 	public void run() {
+		compileDefines();
+		
+		// execution loop
+		System.out.println("TSWEscheme running");
+		for (TopLvlItem formItem : prog.getProlist()) {
+			Node form = formItem.getMainForm().getNode(); // get a program form
+			formSymbolTable = formItem.getMST(); // get the forms symbolTable
+			execute(form);
+		}
+
+	}
+
+
+
+	private void compileDefines() {
 		for (Iterator<TopLvlItem> it= prog.getProlist().iterator();it.hasNext();) {
 			TopLvlItem formItem = it.next();
 			// compile all defines into symbol table
@@ -26,11 +48,7 @@ public class Executor {
 			formSymbolTable = formItem.getMST(); // get the form symbol table
 			Node tl = form.getLeft();
 			Node tr=form.getRight();
-			//System.out.println("Parent:"+form.getParent());
-			//System.out.println("Form: "+ form.getValue());
-			//System.out.println(" TL: "+tl.getValue());
-			//System.out.println(" TR.left: "+tr.getLeft().getValue());
-			//System.out.println(" TR.right: "+tr.getRight().getLeft().getValue());
+
 			if (tl !=null && tl.getType()==TokenType.DEFINE) {
 				// several define forms.... first is (define x value)
 				
@@ -39,27 +57,37 @@ public class Executor {
 					// simple number ?
 					switch(tr.getRight().getLeft().getType()) {
 					case NUMBER:
-						String s = tr.getRight().getLeft().getValue();
+						String num = tr.getRight().getLeft().getValue();
 						//System.out.println(topTable);
-						topTable.add(tr.getLeft().getValue(), new ObjectValue(ObjectType.SCHEME_NUMBER,new Double(s)));
+						topTable.add(tr.getLeft().getValue(), new ObjectValue(ObjectType.SCHEME_NUMBER,new Double(num)));
 						break;
-					case STRING:break;
-					default:;
+					case STRING:
+						String str = tr.getRight().getLeft().getValue();
+						//System.out.println(topTable);
+						topTable.add(tr.getLeft().getValue(), new ObjectValue(ObjectType.SCHEME_STRING,str));
+						break;
+					case OPEN_LIST: // openlist gets us in lambda and other forms
+						    // cheat for now just save the list
+						Node lstCar = car(tr.getRight());
+						// full closure not present ... one too many close parens
+						Node l;
+						l=lstCar;
+						while (l.getRight()!=null){
+							l=l.getRight();
+						}
+						l.getParent().setRight(null); // remove trailing )
+						topTable.add(tr.getLeft().getValue(), new ObjectValue(ObjectType.SCHEME_PAIR,lstCar));
+						break;
+					default:
+						System.out.print("Define for "+tr.getRight().getLeft().getType());
+						System.out.println("  value: "+tr.getLeft().getValue());
 					}
 				}
+				
 				// remove this form from program list
 				it.remove();
 			}
 		}
-		
-		// execution loop
-		System.out.println("++++ EXECUTE ++++");
-		for (TopLvlItem formItem : prog.getProlist()) {
-			Node form = formItem.getMainForm().getNode(); // get a program form
-			formSymbolTable = formItem.getMST(); // get the forms symbolTable
-			execute(form);
-		}
-
 	}
 
 	private void execute(Node form) {
@@ -69,7 +97,7 @@ public class Executor {
 		if (form.getLeft()==null) {
 			return;
 		}
-		System.out.println("LFT:"+form.getLeft()+" Type:"+form.getLeft().getType());
+		//System.out.println("LFT:"+form.getLeft()+" Type:"+form.getLeft().getType());
 		switch (form.getLeft().getType()) {
 
 		case CAR:
@@ -93,7 +121,7 @@ public class Executor {
 	private Node doSymbol(Node form) {
 		String sym = form.getLeft().getValue();
 		Node result = new Node(null);
-		System.out.println("Dosymbol");
+		//System.out.println("Dosymbol");
 		if (formSymbolTable.isInTable(sym)) {
 			result.setValue(new Token(formSymbolTable.getSymbol(sym).get()));
 		} else if (topTable.isInTable(sym)) {
@@ -101,7 +129,7 @@ public class Executor {
 		} else {
 			result.setValue(new Token("failed to find symbol "+sym)); 
 		}
-		System.out.println("Value "+result.getValue());
+		//System.out.println("Value "+result.getValue());
 		return result;
 	}
 

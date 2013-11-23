@@ -40,6 +40,7 @@ public class Node {
 	}
 
 	public TokenType getType() {
+		if (value==null) return TokenType.NULL;
 		return value.getType();
 	}
 

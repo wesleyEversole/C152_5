@@ -1,0 +1,8 @@
+(define x 1)
+(x)
+(car (1 2 3))
+(cdr (1 2 3))
+(define y (cdr (1 2 3 4)))
+(y)
+(define z (car (1 2 3 4 )))
+(z)

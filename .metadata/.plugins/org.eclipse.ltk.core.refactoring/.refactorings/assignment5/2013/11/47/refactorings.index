@@ -10,3 +10,4 @@
 1385095039906	Rename local variable 'tli'
 1385098514227	Delete element
 1385159116026	Rename local variable 'r'
+1385173549665	Extract method 'compileDefines'

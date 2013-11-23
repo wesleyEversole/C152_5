@@ -38,15 +38,15 @@ public class Print {
 	private void exc(Node n) {
 		// System.out.println("exc");
 		if (n==null) {
-			System.out.println("Scheme: null exception");
+			//System.out.println("Scheme: null exception");
 			return;
 		}
 		if (n.getParent() == null) {
 			// Top most node
 			System.out.println(n.getValue());
-			System.out.println("TopLeft");
+			//System.out.println("TopLeft");
 			exc(n.getLeft());
-			System.out.println("Top Right");
+			//System.out.println("Top Right");
 			exc(n.getRight());
 			return;
 		}
@@ -54,20 +54,20 @@ public class Print {
 		if (n.getLeft() != null) {
 			// System.out.println(indent + "(");
 			// indent += " ";
-			System.out.println("Left");
+			//System.out.println("Left");
 			exc(n.getLeft());
 		}
 
 		if (n != null) {
 			if (!n.getValue().isEmpty()) {
-				System.out.print("Node VALUE:");
+				//System.out.print("Node VALUE:");
 				// need to print (
 				// needs formating
 				if (n.getType() == TokenType.OPEN_LIST) {
 					System.out.println();
 					indent += " ";
 				}
-				System.out.println(indent + n.getValue() + " ");
+				//System.out.println(indent + n.getValue() + " ");
 				// System.out.println(n.getLeft() + " " +
 				// ((n.getRight()!=null)?n.getRight().getValue():"null") + " " +
 				// n.getParent());
@@ -91,10 +91,10 @@ public class Print {
 		}
 
 		if (n.getRight() != null) {
-			System.out.println("Right");
+			//System.out.println("Right");
 			exc(n.getRight());
 		}
-		System.out.println("Leaving:"+ ((n!= null)?n.getValue():"EMPTY"));
+		//System.out.println("Leaving:"+ ((n!= null)?n.getValue():"EMPTY"));
 		return;
 	}
 }
