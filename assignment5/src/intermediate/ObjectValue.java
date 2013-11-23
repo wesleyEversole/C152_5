@@ -1,6 +1,6 @@
 /*
  * @Author Tim Stullich , Wesley Eversole
- * Assignment 5 
+ * Assignment 6
  * Project for CS 152
  */
 package intermediate;
@@ -93,9 +93,16 @@ public class ObjectValue {
 			return value.toString();
 		}
 	}
+	public Object getValue() {
+		return value;
+	}
 
 	public void set(String s) {
 		value = s;
 		type = ObjectType.SCHEME_STRING;
+	}
+	
+	public ObjectType getType() {
+		return type;
 	}
 }

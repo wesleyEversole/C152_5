@@ -1,6 +1,6 @@
 /*
  * @Author Tim Stullich , Wesley Eversole
- * Assignment 5 
+ * Assignment 6
  * Project for CS 152
  */
 package frontend;
@@ -82,11 +82,12 @@ public class CSScanner {
 		stemp = new StringBuilder();
 
 		while (!Character.isSpaceChar(ch)) {
-			if (Character.getNumericValue(ch) == -1) {
-				ch = 0;
-				//System.out.println("we got -1 !");
-				return "\0";
-			}
+//			System.out.println("Reading "+ch);
+//			if (Character.getNumericValue(ch) == -1) {
+//				ch = 0;
+//				System.out.println("we got -1 !");
+//				return "\0";
+//			}
 
 			// System.out.println(Character.getNumericValue(ch));
 			stemp.append(ch);

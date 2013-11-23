@@ -11,3 +11,5 @@
 1385098514227	Delete element
 1385159116026	Rename local variable 'r'
 1385173549665	Extract method 'compileDefines'
+1385175991736	Delete element
+1385179372846	Extract method 'removeTail'

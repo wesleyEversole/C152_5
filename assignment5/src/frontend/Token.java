@@ -1,6 +1,6 @@
 /*
  * @Author Tim Stullich , Wesley Eversole
- * Assignment 5 
+ * Assignment 6
  * Project for CS 152
  */
 package frontend;
@@ -103,6 +103,9 @@ public class Token {
 		case "DELAY-LIST-CONS":
 			type = TokenType.DELAY_LIST_CONS;
 			break;
+		case "/":
+			type = TokenType.DIVIDE;
+			break;
 		case "DO":
 			type = TokenType.DO;
 			break;
@@ -136,11 +139,17 @@ public class Token {
 		case "MACRO":
 			type = TokenType.MACRO;
 			break;
+		case "-":
+			type = TokenType.MINUS;
+			break;
 		case "OBJECT-MAKER":
 			type = TokenType.OBJECT_MAKER;
 			break;
 		case "OR":
 			type = TokenType.OR;
+			break;
+		case "+":
+			type = TokenType.PLUS;
 			break;
 		case "QUOTE":
 			type = TokenType.QUOTE;

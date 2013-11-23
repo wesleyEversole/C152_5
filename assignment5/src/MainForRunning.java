@@ -1,6 +1,6 @@
 /*
  * @Author Tim Stullich , Wesley Eversole
- * Assignment 5 
+ * Assignment 56
  * Project for CS 152
  */
 import intermediate.Program;

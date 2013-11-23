@@ -1,6 +1,6 @@
 /*
  * @Author Tim Stullich , Wesley Eversole
- * Assignment 5 
+ * Assignment 6 
  * Project for CS 152
  */
 package intermediate;
@@ -21,6 +21,12 @@ public class Node {
 		left = null;
 		right = null;
 		parent = p;
+	}
+	private Node(Token v, Node l, Node r, Node p) {
+		this.value=v;
+		this.left=l;
+		this.right=r;
+		this.parent=p;
 	}
 
 	public Node getParent() {
@@ -79,4 +85,17 @@ public class Node {
 	public void setOt(ObjectType ot) {
 		this.ot = ot;
 	}
+	
+    public Node copy() {
+        Node left = null;
+        Node right = null;
+        
+        if (this.left != null) {
+            left = this.left.copy();
+        }
+        if (this.right != null) {
+            right = this.right.copy();
+        }
+        return new Node(value, left, right,parent);
+    }
 }
